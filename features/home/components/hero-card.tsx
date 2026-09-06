@@ -7,19 +7,19 @@ export function HeroCard() {
       {/* Top Badge */}
       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e4f5fc] border border-sky-200/70 text-[#0284c7] text-[11px] font-semibold tracking-wide mb-5">
         <span className="w-1.5 h-1.5 rounded-full bg-[#0284c7] animate-pulse" />
-        <span>Full-Stack &amp; AI-Integrated Software Engineering</span>
+        <span>Aspiring Software Engineer • Full Stack Developer</span>
       </div>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-slate-900 leading-snug">
-        Architecting Resilient Systems with{" "}
-        <span className="text-[#0284c7]">Clean Code</span> &amp;{" "}
+      <h1 className="text-2xl sm:text-3xl lg:text-[32px] font-bold tracking-tight text-slate-900 leading-snug">
+        Membangun Aplikasi Web dengan{" "}
+        <span className="text-[#0284c7]">Clean Architecture</span> &amp;{" "}
         <span className="bg-gradient-to-r from-[#0284c7] to-[#38bdf8] bg-clip-text text-transparent">
           AI Integration.
         </span>
       </h1>
 
-      <p className="mt-4 text-sm sm:text-[15px] text-slate-600 leading-relaxed max-w-2xl">
-        Halo! Saya <span className="font-semibold text-slate-900">Putra Rizky Nugraha</span> — Software Engineer yang mentransformasikan ketelitian dan disiplin <span className="font-medium text-slate-800">maintenance elektrikal industri</span> ke dalam rekayasa software modern. Berfokus pada backend tangguh dengan <span className="font-medium text-slate-800">Golang (Clean Architecture &amp; Modular Monolith)</span>, antarmuka modern dengan <span className="font-medium text-slate-800">Next.js &amp; TypeScript</span>, serta penerapan mutakhir <span className="font-medium text-slate-800">AI / RAG &amp; Vector Database (Qdrant)</span>.
+      <p className="mt-4 text-sm sm:text-[14.5px] text-slate-600 leading-relaxed max-w-2xl">
+        Halo! Saya <span className="font-semibold text-slate-900">Putra Rizky Nugraha</span> — aspiring software engineer yang sedang bertransisi dari latar belakang maintenance elektrikal industri ke dunia pengembangan web. Sebagai <span className="font-medium text-slate-800">Full Stack Developer</span>, saya terbiasa membangun backend dengan <span className="font-medium text-slate-800">Golang (Clean Architecture &amp; Modular Monolith)</span>, merancang frontend dengan <span className="font-medium text-slate-800">Next.js &amp; TypeScript</span>, serta mengintegrasikan fitur AI seperti <span className="font-medium text-slate-800">RAG dengan Qdrant Vector DB</span> dan memanfaatkan <span className="font-medium text-slate-800">AI coding agents</span> untuk mempercepat alur kerja pengembangan.
       </p>
 
       {/* Page Navigation CTAs */}
@@ -28,7 +28,7 @@ export function HeroCard() {
           href="/projects"
           className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#0284c7] to-[#0ea5e9] hover:from-[#0369a1] hover:to-[#0284c7] text-white text-xs sm:text-sm font-medium transition-all shadow-sm shadow-sky-600/20 active:scale-[0.98]"
         >
-          <span>Jelajahi Proyek Rekayasa</span>
+          <span>Jelajahi Proyek</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
 
@@ -44,27 +44,27 @@ export function HeroCard() {
           href="/about"
           className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs sm:text-sm font-medium transition-colors border border-slate-200/80"
         >
-          <span>Cerita Perjalanan &amp; Mindset</span>
+          <span>Cerita &amp; Perjalanan</span>
         </Link>
       </div>
 
-      {/* Quick Metrics / Key Strengths */}
+      {/* Quick Highlights */}
       <div className="mt-8 pt-6 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-5">
         <div>
-          <p className="text-xl sm:text-2xl font-bold text-[#0284c7]">Clean &amp; Modular</p>
-          <p className="text-xs text-slate-500 font-medium mt-0.5">Architecture Principles</p>
+          <p className="text-xl sm:text-2xl font-bold text-[#0284c7]">Golang Backend</p>
+          <p className="text-xs text-slate-500 font-medium mt-0.5">Clean &amp; Modular Monolith</p>
         </div>
         <div>
-          <p className="text-xl sm:text-2xl font-bold text-slate-900">Golang (Fiber)</p>
-          <p className="text-xs text-slate-500 font-medium mt-0.5">High-Throughput Backend</p>
+          <p className="text-xl sm:text-2xl font-bold text-slate-900">Next.js &amp; React</p>
+          <p className="text-xs text-slate-500 font-medium mt-0.5">TypeScript &amp; Tailwind</p>
         </div>
         <div>
-          <p className="text-xl sm:text-2xl font-bold text-[#0284c7]">RAG &amp; Qdrant</p>
-          <p className="text-xs text-slate-500 font-medium mt-0.5">Vector DB &amp; Multi-Agent</p>
+          <p className="text-xl sm:text-2xl font-bold text-[#0284c7]">AI Integrated</p>
+          <p className="text-xs text-slate-500 font-medium mt-0.5">RAG, Qdrant &amp; AI Agents</p>
         </div>
         <div>
-          <p className="text-xl sm:text-2xl font-bold text-slate-900">Zero-Downtime</p>
-          <p className="text-xs text-slate-500 font-medium mt-0.5">Industrial Rigor &amp; Uptime</p>
+          <p className="text-xl sm:text-2xl font-bold text-slate-900">Industrial Rigor</p>
+          <p className="text-xs text-slate-500 font-medium mt-0.5">Ketelitian &amp; Reliability</p>
         </div>
       </div>
     </section>

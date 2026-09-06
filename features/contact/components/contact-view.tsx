@@ -56,7 +56,7 @@ export function ContactView() {
         </h1>
 
         <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-          Saya selalu terbuka untuk peluang baru di bidang Software Engineering (Full-Stack &amp; Golang Backend), proyek pengembangan web kustom, maupun diskusi arsitektur sistem.
+          Saya terbuka untuk peluang baru sebagai Full Stack Developer, proyek pengembangan web, backend Golang, maupun diskusi seputar arsitektur aplikasi dan AI.
         </p>
 
         {/* Location Info */}
