@@ -48,7 +48,7 @@ export default function RootLayout({
         />
 
         {/* Main Application Shell Layout */}
-        <div className="relative z-10 w-full max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-8 pb-24 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch flex-1">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-16 pt-20 lg:pt-10 pb-24 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch flex-1">
           {/* Left Column: Profile Sidebar / Navbar */}
           <SidebarNavbar />
 
