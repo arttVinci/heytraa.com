@@ -7,7 +7,7 @@ export function HeroCard() {
       {/* Top Badge */}
       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e4f5fc] border border-sky-200/70 text-[#0284c7] text-[11px] font-semibold tracking-wide mb-5">
         <span className="w-1.5 h-1.5 rounded-full bg-[#0284c7] animate-pulse" />
-        <span>Aspiring Software Engineer • Full Stack Developer</span>
+        <span>Full Stack Developer • AI-Agent-Driven Workflow</span>
       </div>
 
       <h1 className="text-2xl sm:text-3xl lg:text-[32px] font-bold tracking-tight text-slate-900 leading-snug">
