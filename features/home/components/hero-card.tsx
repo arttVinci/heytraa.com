@@ -11,7 +11,7 @@ export function HeroCard() {
       </div>
 
       <h1 className="text-2xl sm:text-3xl lg:text-[32px] font-bold tracking-tight text-slate-900 leading-snug">
-        Membangun Aplikasi Web dengan{" "}
+        Building Modern Web Applications with{" "}
         <span className="text-[#0284c7]">Clean Architecture</span> &amp;{" "}
         <span className="bg-gradient-to-r from-[#0284c7] to-[#38bdf8] bg-clip-text text-transparent">
           AI Integration.
