@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { SidebarNavbar } from "@/shared/components/layout";
+import { SidebarNavbar, BackgroundGrid } from "@/shared/components/layout";
 import { AssistantChat } from "@/features/assistant";
 
 const geistSans = Geist({
@@ -31,24 +31,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#f8fafc] text-slate-900 selection:bg-[#0284c7] selection:text-white relative">
-        {/* Subtle Background Grid Kotak-Kotak with Ocean Blue Tint */}
-        <div
-          className="fixed inset-0 pointer-events-none z-0 bg-grid-pattern bg-grid-mask opacity-80"
-          aria-hidden="true"
-        />
-
-        {/* Ambient soft glow accents */}
-        <div
-          className="fixed top-[-5%] left-[25%] w-[550px] h-[550px] rounded-full bg-sky-300/15 blur-[140px] pointer-events-none z-0"
-          aria-hidden="true"
-        />
-        <div
-          className="fixed bottom-[-10%] right-[15%] w-[500px] h-[500px] rounded-full bg-blue-400/10 blur-[150px] pointer-events-none z-0"
-          aria-hidden="true"
-        />
+        {/* Modern Vector Architectural Grid with Crosshairs */}
+        <BackgroundGrid />
 
         {/* Main Application Shell Layout */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-16 pt-20 lg:pt-10 pb-24 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch flex-1">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-2.5 sm:px-[23px] lg:px-[39px] xl:px-[47px] pt-20 lg:pt-10 pb-24 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch flex-1">
           {/* Left Column: Profile Sidebar / Navbar */}
           <SidebarNavbar />
 
