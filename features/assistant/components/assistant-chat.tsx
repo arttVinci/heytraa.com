@@ -85,9 +85,15 @@ export function AssistantChat() {
       } else if (query.toLowerCase().includes("estimasi") || query.toLowerCase().includes("waktu")) {
         botReply =
           "Estimasi pengerjaan biasanya berkisar antara 1 - 4 minggu tergantung kompleksitas fitur, skala sistem, dan kebutuhan integrasi. Kami selalu berkomitmen pada On-Time Delivery.";
+      } else if (query.toLowerCase().includes("arsitektur") || query.toLowerCase().includes("architecture")) {
+        botReply =
+          "Putra biasa mengimplementasikan Modular Monolith Architecture, Clean Architecture, Layered Architecture (N-Tier), dan standar RESTful API Contract Design yang scalable dan mudah dipelihara.";
+      } else if (query.toLowerCase().includes("agent") || query.toLowerCase().includes("ai") || query.toLowerCase().includes("mcp") || query.toLowerCase().includes("rag")) {
+        botReply =
+          "Dalam AI & Autonomous Engineering, Putra menguasai konsep Model Context Protocol (MCP), Retrieval-Augmented Generation (RAG), dan LLM Integration. Untuk workflow coding agent harian, Putra memanfaatkan Oh My Pi (OMP), Google Antigravity, 9router, dan CommandCode.";
       } else if (query.toLowerCase().includes("stack") || query.toLowerCase().includes("teknologi")) {
         botReply =
-          "Tech stack utama yang dikuasai meliputi Next.js (App Router), React, TypeScript, Tailwind CSS, Node.js, REST/GraphQL API, serta database PostgreSQL/MySQL.";
+          "Tech stack utama yang dikuasai meliputi Golang (Go Fiber), TypeScript, JavaScript, PHP, Next.js, React, Tailwind CSS, MySQL, GCP, Cloudflare, Docker, serta tools Postman, TablePlus, GitHub, dan Git. Didukung pula oleh coding agent (Oh My Pi, Antigravity, 9router, CommandCode) dan pola arsitektur Modular Monolith & Clean Architecture.";
       }
 
       const assistantMsg: ChatMessage = {
