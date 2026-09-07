@@ -47,26 +47,6 @@ export function HeroCard() {
           <span>Cerita &amp; Perjalanan</span>
         </Link>
       </div>
-
-      {/* Quick Highlights */}
-      <div className="mt-8 pt-6 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-5">
-        <div>
-          <p className="text-xl sm:text-2xl font-bold text-[#0284c7]">Golang Backend</p>
-          <p className="text-xs text-slate-500 font-medium mt-0.5">Clean &amp; Modular Monolith</p>
-        </div>
-        <div>
-          <p className="text-xl sm:text-2xl font-bold text-slate-900">Next.js &amp; React</p>
-          <p className="text-xs text-slate-500 font-medium mt-0.5">TypeScript &amp; Tailwind</p>
-        </div>
-        <div>
-          <p className="text-xl sm:text-2xl font-bold text-[#0284c7]">AI Integrated</p>
-          <p className="text-xs text-slate-500 font-medium mt-0.5">RAG, Qdrant &amp; AI Agents</p>
-        </div>
-        <div>
-          <p className="text-xl sm:text-2xl font-bold text-slate-900">Industrial Rigor</p>
-          <p className="text-xs text-slate-500 font-medium mt-0.5">Ketelitian &amp; Reliability</p>
-        </div>
-      </div>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import { HeroCard } from "./hero-card";
+import { TechStackSection } from "./tech-stack-section";
 import { QuickHighlights } from "./quick-highlights";
 import Link from "next/link";
 import { Sparkles, ArrowRight } from "lucide-react";
@@ -8,6 +9,9 @@ export function HomeView() {
     <div className="space-y-8">
       {/* Hero Card */}
       <HeroCard />
+
+      {/* Tech Stack with Logos */}
+      <TechStackSection />
 
       {/* Navigation Hubs to Dedicated Pages */}
       <QuickHighlights />
