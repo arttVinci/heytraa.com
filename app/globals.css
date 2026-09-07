@@ -14,16 +14,29 @@ body {
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Subtle modern grid pattern for JelajahKode-style light theme */
-.bg-grid-pattern {
-  background-size: 36px 36px;
-  background-image: 
-    linear-gradient(to right, rgba(2, 132, 199, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(2, 132, 199, 0.05) 1px, transparent 1px);
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
 }
 
-/* Radial fade for modern subtle depth */
-.bg-grid-mask {
-  mask-image: radial-gradient(ellipse 85% 75% at 50% 25%, #000 65%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 25%, #000 65%, transparent 100%);
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap, 1rem)));
+  }
 }
+
+.animate-marquee {
+  animation: marquee var(--duration, 40s) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration, 40s) linear infinite;
+}
+
