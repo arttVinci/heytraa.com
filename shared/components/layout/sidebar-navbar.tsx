@@ -55,7 +55,7 @@ export function SidebarNavbar() {
     <div className="flex flex-col items-center w-full">
       {/* Profile Avatar (Placeholder / Kosong) */}
       <div className="relative">
-        <div className="w-24 h-24 rounded-full bg-slate-100 border-2 border-dashed border-slate-300/90 flex items-center justify-center text-slate-400 shadow-inner transition-colors duration-200 hover:border-[#0284c7] hover:bg-[#e4f5fc]/40 hover:text-[#0284c7]">
+        <div className="w-24 h-24 rounded-full bg-[#F5F8F9] border-2 border-dashed border-slate-300/90 flex items-center justify-center text-slate-400 shadow-inner transition-colors duration-200 hover:border-[#689F99] hover:bg-[#689F99]/10 hover:text-[#689F99]">
           <User className="w-10 h-10 stroke-[1.5]" />
         </div>
       </div>
@@ -63,12 +63,12 @@ export function SidebarNavbar() {
       {/* Name & Handle */}
       <div className="flex flex-col items-center mt-3 text-center">
         <div className="flex items-center gap-1.5">
-          <h2 className="text-base font-bold tracking-tight text-slate-900">
+          <h2 className="text-base font-bold tracking-tight text-[#2D3342]">
             Putra Rizky
           </h2>
-          <BadgeCheck className="w-4 h-4 text-[#0284c7] fill-[#0284c7] shrink-0" />
+          <BadgeCheck className="w-4 h-4 text-[#689F99] fill-[#689F99] shrink-0" />
         </div>
-        <span className="text-[11px] font-medium text-[#0284c7]/80 mt-0.5 font-mono">
+        <span className="text-[11px] font-medium text-[#689F99] mt-0.5 font-mono">
           @traa_rzkyy
         </span>
       </div>
@@ -100,8 +100,8 @@ export function SidebarNavbar() {
               className={cn(
                 "group flex items-center justify-between px-3 py-2 rounded-xl text-[13px] font-medium transition-all duration-200",
                 isActive
-                  ? "bg-gradient-to-r from-[#0284c7] to-[#0ea5e9] text-white shadow-sm shadow-sky-500/25 font-semibold"
-                  : "text-slate-600 hover:text-[#0284c7] hover:bg-[#e4f5fc]/70",
+                  ? "bg-[#689F99] text-white shadow-sm shadow-[#689F99]/25 font-semibold"
+                  : "text-[#2D3342]/80 hover:text-[#689F99] hover:bg-[#689F99]/10",
               )}
             >
               <div className="flex items-center gap-2.5">
@@ -110,7 +110,7 @@ export function SidebarNavbar() {
                     "w-3.5 h-3.5 transition-transform duration-200 group-hover:scale-110",
                     isActive
                       ? "text-white"
-                      : "text-slate-400 group-hover:text-[#0284c7]",
+                      : "text-slate-400 group-hover:text-[#689F99]",
                   )}
                 />
                 <span>{item.label}</span>
@@ -124,7 +124,7 @@ export function SidebarNavbar() {
         })}
       </nav>
 
-      {/* CTA Button - Smart Talk with JelajahKode Vibrant Blue Gradient */}
+      {/* CTA Button - Smart Talk with Muted Sage Teal Gradient */}
       <div className="w-full mt-4">
         <button
           type="button"
@@ -133,8 +133,8 @@ export function SidebarNavbar() {
           }}
           className={cn(
             "relative w-full group overflow-hidden flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl",
-            "bg-gradient-to-r from-[#0284c7] via-[#0ea5e9] to-[#38bdf8] text-white text-xs sm:text-[13px] font-semibold tracking-wide",
-            "shadow-md shadow-sky-500/25 hover:shadow-lg hover:shadow-sky-500/40",
+            "bg-gradient-to-r from-[#689F99] to-[#52837d] text-white text-xs sm:text-[13px] font-semibold tracking-wide",
+            "shadow-md shadow-[#689F99]/25 hover:shadow-lg hover:shadow-[#689F99]/40",
             "transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]",
           )}
         >
@@ -143,7 +143,7 @@ export function SidebarNavbar() {
 
           <MessageSquare className="w-3.5 h-3.5 text-white group-hover:scale-110 transition-transform duration-200" />
           <span>Smart Talk</span>
-          <Sparkles className="w-3 h-3 text-sky-100 ml-0.5 opacity-90" />
+          <Sparkles className="w-3 h-3 text-[#F5F8F9] ml-0.5 opacity-90" />
         </button>
       </div>
 
@@ -157,7 +157,7 @@ export function SidebarNavbar() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub @arttVinci"
-          className="p-1.5 rounded-xl text-slate-400 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+          className="p-1.5 rounded-xl text-slate-400 hover:text-[#2D3342] hover:bg-[#F5F8F9] transition-colors"
         >
           <GithubIcon className="w-4 h-4" />
         </a>
@@ -166,7 +166,7 @@ export function SidebarNavbar() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn Putra Rizky Nugraha"
-          className="p-1.5 rounded-xl text-slate-400 hover:text-[#0284c7] hover:bg-[#e4f5fc] transition-colors"
+          className="p-1.5 rounded-xl text-slate-400 hover:text-[#689F99] hover:bg-[#689F99]/10 transition-colors"
         >
           <LinkedinIcon className="w-4 h-4" />
         </a>
@@ -184,19 +184,19 @@ export function SidebarNavbar() {
   return (
     <>
       {/* Mobile Top Header (Visible on < lg screens) */}
-      <header className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-sky-100 px-4 py-3 flex items-center justify-between shadow-xs">
+      <header className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#689F99]/20 px-4 py-3 flex items-center justify-between shadow-xs">
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-400">
+          <div className="w-9 h-9 rounded-full bg-[#F5F8F9] border border-slate-200 flex items-center justify-center text-slate-400">
             <User className="w-4 h-4 stroke-[1.5]" />
           </div>
           <div>
             <div className="flex items-center gap-1">
-              <span className="text-sm font-bold text-slate-900">
+              <span className="text-sm font-bold text-[#2D3342]">
                 Putra Rizky
               </span>
-              <BadgeCheck className="w-3.5 h-3.5 text-[#0284c7] fill-[#0284c7]" />
+              <BadgeCheck className="w-3.5 h-3.5 text-[#689F99] fill-[#689F99]" />
             </div>
-            <span className="text-[10px] font-mono text-[#0284c7]/80">
+            <span className="text-[10px] font-mono text-[#689F99]">
               @traa_rzkyy
             </span>
           </div>
@@ -206,7 +206,7 @@ export function SidebarNavbar() {
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          className="p-2 rounded-xl text-slate-600 hover:text-[#0284c7] hover:bg-[#e4f5fc] transition-colors"
+          className="p-2 rounded-xl text-slate-600 hover:text-[#689F99] hover:bg-[#689F99]/10 transition-colors"
         >
           {mobileMenuOpen ? (
             <X className="w-5 h-5" />
@@ -218,7 +218,7 @@ export function SidebarNavbar() {
 
       {/* Mobile Drawer Overlay & Content */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-slate-900/30 backdrop-blur-xs flex justify-end animate-in fade-in duration-200">
+        <div className="lg:hidden fixed inset-0 z-50 bg-[#2D3342]/30 backdrop-blur-xs flex justify-end animate-in fade-in duration-200">
           <div
             className="w-[300px] h-full bg-white p-5 overflow-y-auto shadow-2xl flex flex-col justify-between animate-in slide-in-from-right duration-300"
             onClick={(e) => e.stopPropagation()}
@@ -227,7 +227,7 @@ export function SidebarNavbar() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="p-1.5 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100"
+                className="p-1.5 rounded-xl text-slate-400 hover:text-[#2D3342] hover:bg-[#F5F8F9]"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -239,7 +239,7 @@ export function SidebarNavbar() {
 
       {/* Desktop Sticky Sidebar (Visible on lg screens) */}
       <aside className="hidden lg:block w-[280px] shrink-0 self-stretch">
-        <div className="sticky top-8 bg-white/95 backdrop-blur-md border border-sky-100/90 rounded-3xl p-5 shadow-xl shadow-sky-900/5 max-h-[calc(100vh-4rem)] overflow-y-auto">
+        <div className="sticky top-8 bg-white/95 backdrop-blur-md border border-[#689F99]/20 rounded-3xl p-5 shadow-xl shadow-[#2D3342]/5 max-h-[calc(100vh-4rem)] overflow-y-auto">
           {renderNavContent()}
         </div>
       </aside>

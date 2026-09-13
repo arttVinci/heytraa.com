@@ -122,24 +122,24 @@ export function AssistantChat() {
           aria-label="Buka Assistant heytraa"
           className={cn(
             "group flex items-center gap-3 pl-2.5 pr-5 py-2.5 rounded-full",
-            "bg-gradient-to-r from-[#0284c7] via-[#0ea5e9] to-[#38bdf8] text-white",
-            "shadow-lg shadow-sky-500/30 hover:shadow-xl hover:shadow-sky-500/45",
+            "bg-gradient-to-r from-[#689F99] to-[#52837d] text-white",
+            "shadow-lg shadow-[#689F99]/30 hover:shadow-xl hover:shadow-[#689F99]/45",
             "hover:scale-105 active:scale-95 transition-all duration-300",
             isOpen && "scale-95 ring-2 ring-white/60"
           )}
         >
           {/* Avatar / Bot icon circle */}
-          <div className="relative w-9 h-9 rounded-full bg-white flex items-center justify-center text-[#0284c7] shadow-xs group-hover:rotate-6 transition-transform duration-300">
-            <Bot className="w-5 h-5 text-[#0284c7]" />
-            <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-500 border-2 border-white rounded-full animate-pulse" />
+          <div className="relative w-9 h-9 rounded-full bg-white flex items-center justify-center text-[#689F99] shadow-xs group-hover:rotate-6 transition-transform duration-300">
+            <Bot className="w-5 h-5 text-[#689F99]" />
+            <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-[#689F99] border-2 border-white rounded-full animate-pulse" />
           </div>
 
           <div className="flex flex-col text-left leading-tight">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-sky-100 flex items-center gap-1">
+            <span className="text-[10px] uppercase font-bold tracking-wider text-[#F5F8F9]/90 flex items-center gap-1">
               <span>AI ASSISTANT</span>
-              <Sparkles className="w-2.5 h-2.5 text-sky-200" />
+              <Sparkles className="w-2.5 h-2.5 text-[#F5F8F9]" />
             </span>
-            <span className="text-xs font-extrabold tracking-tight">
+            <span className="text-xs font-extrabold tracking-tight text-white">
               Assistant heytraa
             </span>
           </div>
@@ -152,26 +152,26 @@ export function AssistantChat() {
           className={cn(
             "fixed bottom-22 right-4 sm:right-6 z-50",
             "w-[calc(100vw-2rem)] sm:w-[400px] h-[540px] max-h-[calc(100vh-7rem)]",
-            "bg-white/95 backdrop-blur-xl border border-sky-100 rounded-3xl",
-            "shadow-2xl shadow-sky-950/15 flex flex-col overflow-hidden",
+            "bg-white/95 backdrop-blur-xl border border-[#689F99]/30 rounded-3xl",
+            "shadow-2xl shadow-[#2D3342]/20 flex flex-col overflow-hidden",
             "animate-in fade-in slide-in-from-bottom-5 duration-300"
           )}
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-[#0284c7] to-[#0ea5e9] p-4 text-white flex items-center justify-between shrink-0 shadow-xs">
+          <div className="bg-gradient-to-r from-[#2D3342] to-[#384052] p-4 text-white flex items-center justify-between shrink-0 shadow-xs border-b border-[#689F99]/20">
             <div className="flex items-center gap-3">
-              <div className="relative w-9 h-9 rounded-2xl bg-white/15 backdrop-blur-xs flex items-center justify-center border border-white/20">
+              <div className="relative w-9 h-9 rounded-2xl bg-white/10 backdrop-blur-xs flex items-center justify-center border border-white/20">
                 <Bot className="w-5 h-5 text-white" />
-                <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 border-2 border-[#0284c7] rounded-full" />
+                <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-[#689F99] border-2 border-[#2D3342] rounded-full" />
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
-                  <h3 className="font-bold text-sm tracking-tight">Assistant heytraa</h3>
-                  <span className="px-1.5 py-0.2 rounded-md bg-white/20 text-[10px] font-mono tracking-wider font-semibold">
+                  <h3 className="font-bold text-sm tracking-tight text-white">Assistant heytraa</h3>
+                  <span className="px-1.5 py-0.2 rounded-md bg-[#689F99]/30 text-[10px] font-mono tracking-wider font-semibold text-[#F5F8F9]">
                     RAG
                   </span>
                 </div>
-                <p className="text-[11px] text-sky-100 font-medium">
+                <p className="text-[11px] text-[#F5F8F9]/70 font-medium">
                   Tanya seputar layanan & portofolio
                 </p>
               </div>
@@ -182,7 +182,7 @@ export function AssistantChat() {
                 type="button"
                 onClick={handleResetChat}
                 title="Reset Obrolan"
-                className="p-1.5 rounded-xl text-sky-100 hover:text-white hover:bg-white/10 transition-colors"
+                className="p-1.5 rounded-xl text-[#F5F8F9]/70 hover:text-white hover:bg-white/10 transition-colors"
               >
                 <RotateCcw className="w-4 h-4" />
               </button>
@@ -190,7 +190,7 @@ export function AssistantChat() {
                 type="button"
                 onClick={() => setIsOpen(false)}
                 title="Tutup Chat"
-                className="p-1.5 rounded-xl text-sky-100 hover:text-white hover:bg-white/10 transition-colors"
+                className="p-1.5 rounded-xl text-[#F5F8F9]/70 hover:text-white hover:bg-white/10 transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -198,7 +198,7 @@ export function AssistantChat() {
           </div>
 
           {/* Messages Body */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 text-sm scroll-smooth">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 text-sm scroll-smooth bg-white">
             {messages.map((msg) => (
               <div
                 key={msg.id}
@@ -208,7 +208,7 @@ export function AssistantChat() {
                 )}
               >
                 {msg.role === "assistant" && (
-                  <div className="w-7 h-7 rounded-xl bg-[#e4f5fc] text-[#0284c7] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                  <div className="w-7 h-7 rounded-xl bg-[#689F99]/15 text-[#689F99] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
                     <Bot className="w-4 h-4" />
                   </div>
                 )}
@@ -217,8 +217,8 @@ export function AssistantChat() {
                   className={cn(
                     "rounded-2xl px-3.5 py-2.5 leading-relaxed shadow-xs text-xs sm:text-sm whitespace-pre-wrap",
                     msg.role === "user"
-                      ? "bg-[#0284c7] text-white rounded-tr-xs"
-                      : "bg-[#f8fafc] text-slate-800 border border-sky-100/90 rounded-tl-xs"
+                      ? "bg-[#689F99] text-white rounded-tr-xs"
+                      : "bg-[#F5F8F9] text-[#2D3342] border border-[#689F99]/20 rounded-tl-xs"
                   )}
                 >
                   {msg.content}
@@ -229,7 +229,7 @@ export function AssistantChat() {
             {/* Typing Indicator */}
             {isTyping && (
               <div className="flex items-center gap-2 text-slate-400 text-xs pl-9">
-                <Loader2 className="w-3.5 h-3.5 animate-spin text-[#0284c7]" />
+                <Loader2 className="w-3.5 h-3.5 animate-spin text-[#689F99]" />
                 <span>Assistant heytraa sedang mengetik...</span>
               </div>
             )}
@@ -239,13 +239,13 @@ export function AssistantChat() {
 
           {/* Suggestions Pills */}
           {messages.length <= 2 && (
-            <div className="px-4 py-2 border-t border-slate-100 bg-[#f8fafc]/60 flex flex-wrap gap-1.5">
+            <div className="px-4 py-2 border-t border-slate-100 bg-[#F5F8F9]/60 flex flex-wrap gap-1.5">
               {SUGGESTIONS.map((item) => (
                 <button
                   key={item}
                   type="button"
                   onClick={() => handleSendMessage(item)}
-                  className="text-[11px] px-2.5 py-1 rounded-full bg-white hover:bg-[#e4f5fc] text-slate-600 hover:text-[#0284c7] border border-sky-100/80 shadow-2xs transition-colors"
+                  className="text-[11px] px-2.5 py-1 rounded-full bg-white hover:bg-[#689F99]/15 text-[#2D3342] hover:text-[#689F99] border border-[#689F99]/25 shadow-2xs transition-colors"
                 >
                   {item}
                 </button>
@@ -254,7 +254,7 @@ export function AssistantChat() {
           )}
 
           {/* Input Bar */}
-          <div className="p-3 border-t border-sky-100 bg-white">
+          <div className="p-3 border-t border-[#689F99]/20 bg-white">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -268,13 +268,13 @@ export function AssistantChat() {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Tanya ke Assistant heytraa..."
-                className="flex-1 text-xs sm:text-sm px-3.5 py-2.5 rounded-xl bg-slate-50 border border-sky-100 focus:outline-hidden focus:ring-2 focus:ring-[#0284c7]/30 focus:border-[#0284c7] text-slate-800 placeholder:text-slate-400"
+                className="flex-1 text-xs sm:text-sm px-3.5 py-2.5 rounded-xl bg-[#F5F8F9] border border-slate-200 focus:outline-hidden focus:ring-2 focus:ring-[#689F99]/30 focus:border-[#689F99] text-[#2D3342] placeholder:text-slate-400"
               />
               <button
                 type="submit"
                 disabled={!inputValue.trim() || isTyping}
                 aria-label="Kirim Pesan"
-                className="w-9 h-9 rounded-xl bg-[#0284c7] hover:bg-[#0369a1] disabled:opacity-50 disabled:hover:bg-[#0284c7] text-white flex items-center justify-center transition-colors shadow-xs shrink-0"
+                className="w-9 h-9 rounded-xl bg-[#689F99] hover:bg-[#588c86] disabled:opacity-50 disabled:hover:bg-[#689F99] text-white flex items-center justify-center transition-colors shadow-xs shrink-0"
               >
                 <Send className="w-4 h-4" />
               </button>
