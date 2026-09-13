@@ -7,8 +7,6 @@ import {
   X,
   Send,
   RotateCcw,
-  User,
-  MessageSquareCode,
   Loader2,
 } from "lucide-react";
 import { cn } from "@/shared/lib/utils";
@@ -59,20 +57,21 @@ export function AssistantChat() {
     return () => window.removeEventListener("open-assistant-chat", handleOpenChat);
   }, []);
 
-  const handleSendMessage = async (textToSend?: string) => {
-    const query = (textToSend || inputValue).trim();
-    if (!query || isTyping) return;
+  const handleSendMessage = React.useCallback(
+    async (textToSend?: string) => {
+      const query = (textToSend || inputValue).trim();
+      if (!query || isTyping) return;
 
-    const userMsg: ChatMessage = {
-      id: Date.now().toString(),
-      role: "user",
-      content: query,
-      timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
-    };
+      const userMsg: ChatMessage = {
+        id: typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : `msg-${messages.length}`,
+        role: "user",
+        content: query,
+        timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+      };
 
-    setMessages((prev) => [...prev, userMsg]);
-    setInputValue("");
-    setIsTyping(true);
+      setMessages((prev) => [...prev, userMsg]);
+      setInputValue("");
+      setIsTyping(true);
 
     // Placeholder simulated response until RAG backend is plugged in
     setTimeout(() => {
@@ -106,7 +105,7 @@ export function AssistantChat() {
       setMessages((prev) => [...prev, assistantMsg]);
       setIsTyping(false);
     }, 700);
-  };
+  }, [inputValue, isTyping, messages.length]);
 
   const handleResetChat = () => {
     setMessages(INITIAL_MESSAGES);
