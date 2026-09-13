@@ -33,7 +33,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-[#f8fafc] dark:bg-[#090e17] text-slate-900 dark:text-slate-100 selection:bg-sky-500 selection:text-white relative transition-colors duration-300">
+      <body className="min-h-full flex flex-col bg-[#f8fafc] dark:bg-[#090e17] text-[#2D3342] dark:text-[#F5F8F9] selection:bg-[#689F99] selection:text-white relative transition-colors duration-300">
         <SmoothCursor />
         <BackgroundGrid />
         <ClickSpark />
