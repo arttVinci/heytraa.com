@@ -85,7 +85,10 @@ export function SidebarNavbar() {
       <nav className="flex flex-col w-full gap-1" aria-label="Main Navigation">
         {navItems.map((item) => {
           const Icon = item.icon;
-          const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+          const isActive =
+            item.href === "/"
+              ? pathname === "/"
+              : pathname.startsWith(item.href);
 
           return (
             <Link
@@ -98,14 +101,16 @@ export function SidebarNavbar() {
                 "group flex items-center justify-between px-3 py-2 rounded-xl text-[13px] font-medium transition-all duration-200",
                 isActive
                   ? "bg-gradient-to-r from-[#0284c7] to-[#0ea5e9] text-white shadow-sm shadow-sky-500/25 font-semibold"
-                  : "text-slate-600 hover:text-[#0284c7] hover:bg-[#e4f5fc]/70"
+                  : "text-slate-600 hover:text-[#0284c7] hover:bg-[#e4f5fc]/70",
               )}
             >
               <div className="flex items-center gap-2.5">
                 <Icon
                   className={cn(
                     "w-3.5 h-3.5 transition-transform duration-200 group-hover:scale-110",
-                    isActive ? "text-white" : "text-slate-400 group-hover:text-[#0284c7]"
+                    isActive
+                      ? "text-white"
+                      : "text-slate-400 group-hover:text-[#0284c7]",
                   )}
                 />
                 <span>{item.label}</span>
@@ -130,7 +135,7 @@ export function SidebarNavbar() {
             "relative w-full group overflow-hidden flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl",
             "bg-gradient-to-r from-[#0284c7] via-[#0ea5e9] to-[#38bdf8] text-white text-xs sm:text-[13px] font-semibold tracking-wide",
             "shadow-md shadow-sky-500/25 hover:shadow-lg hover:shadow-sky-500/40",
-            "transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            "transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]",
           )}
         >
           {/* Subtle light shimmer effect */}
@@ -186,10 +191,14 @@ export function SidebarNavbar() {
           </div>
           <div>
             <div className="flex items-center gap-1">
-              <span className="text-sm font-bold text-slate-900">Putra Rizky</span>
+              <span className="text-sm font-bold text-slate-900">
+                Putra Rizky
+              </span>
               <BadgeCheck className="w-3.5 h-3.5 text-[#0284c7] fill-[#0284c7]" />
             </div>
-            <span className="text-[10px] font-mono text-[#0284c7]/80">@traa_rzkyy</span>
+            <span className="text-[10px] font-mono text-[#0284c7]/80">
+              @traa_rzkyy
+            </span>
           </div>
         </div>
 
@@ -199,7 +208,11 @@ export function SidebarNavbar() {
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           className="p-2 rounded-xl text-slate-600 hover:text-[#0284c7] hover:bg-[#e4f5fc] transition-colors"
         >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileMenuOpen ? (
+            <X className="w-5 h-5" />
+          ) : (
+            <Menu className="w-5 h-5" />
+          )}
         </button>
       </header>
 

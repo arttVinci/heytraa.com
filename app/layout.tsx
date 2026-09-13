@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SidebarNavbar, BackgroundGrid } from "@/shared/components/layout";
 import { AssistantChat } from "@/features/assistant";
+import { ClickSpark } from "@/shared/components/click-spark";
+import { SmoothCursor } from "@/shared/components/smooth-cursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,21 +31,17 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-[#f8fafc] text-slate-900 selection:bg-[#0284c7] selection:text-white relative">
-        {/* Modern Vector Architectural Grid with Crosshairs */}
+      <body className="min-h-full flex flex-col bg-[#f8fafc] dark:bg-[#090e17] text-slate-900 dark:text-slate-100 selection:bg-sky-500 selection:text-white relative transition-colors duration-300">
+        <SmoothCursor />
         <BackgroundGrid />
+        <ClickSpark />
 
-        {/* Main Application Shell Layout */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-2.5 sm:px-[23px] lg:px-[39px] xl:px-[47px] pt-20 lg:pt-10 pb-24 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch flex-1">
-          {/* Left Column: Profile Sidebar / Navbar */}
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-2.5 sm:px-[23px] lg:px-[39px] xl:px-[47px] pt-20 lg:pt-10 pb-28 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch flex-1">
           <SidebarNavbar />
-
-          {/* Right Column: Dynamic Page Content */}
           <main className="flex-1 w-full min-w-0">{children}</main>
         </div>
-
-        {/* Floating AI Assistant Chat (Assistant heytraa) */}
         <AssistantChat />
       </body>
     </html>

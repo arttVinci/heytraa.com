@@ -1,10 +1,26 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #e2e8f0;
   --brand-blue: #0284c7;
-  --brand-blue-light: #e4f5fc;
+  --brand-blue-light: #e0f2fe;
+  --brand-blue-gradient: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+}
+
+.dark {
+  --background: #090e17;
+  --foreground: #f8fafc;
+  --card: #0f172a;
+  --card-foreground: #f8fafc;
+  --border: #1e293b;
+  --brand-blue: #38bdf8;
+  --brand-blue-light: #0c4a6e;
   --brand-blue-gradient: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
 }
 
@@ -12,6 +28,7 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @keyframes marquee {
@@ -38,5 +55,34 @@ body {
 
 .animate-marquee-vertical {
   animation: marquee-vertical var(--duration, 40s) linear infinite;
+}
+
+@keyframes rippling {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.animate-rippling {
+  animation: rippling var(--duration, 600ms) ease-out forwards;
+}
+
+/* Magic UI View Transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Smooth Cursor - Hide default OS pointer on desktop when active */
+@media (any-hover: hover) and (any-pointer: fine) {
+  html.has-smooth-cursor,
+  html.has-smooth-cursor * {
+    cursor: none !important;
+  }
 }
 
