@@ -1,6 +1,7 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useEffect, useMemo } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 export type Language = "en" | "id";
 
@@ -11,37 +12,64 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType>({
-  lang: "en",
+  lang: "id",
   setLang: () => {},
   toggleLang: () => {},
 });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Language>("en");
+  const pathname = usePathname() || "/";
+  const router = useRouter();
 
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem("app_lang") as Language | null;
-      if (saved === "en" || saved === "id") {
-        setLangState(saved);
-      }
-    } catch {
-      // Ignore localStorage issues in restricted environments
+  // Compute active language directly from route pathname
+  const lang: Language = useMemo(() => {
+    if (pathname.startsWith("/en/") || pathname === "/en") {
+      return "en";
     }
-  }, []);
+    return "id";
+  }, [pathname]);
+
+  // Keep HTML lang attribute and localStorage/cookie in sync
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+      try {
+        localStorage.setItem("app_lang", lang);
+        document.cookie = `NEXT_LOCALE=${lang}; path=/; max-age=31536000; SameSite=Lax`;
+      } catch {
+        // Ignore storage access errors in restricted contexts
+      }
+    }
+  }, [lang]);
 
   const setLang = (newLang: Language) => {
-    setLangState(newLang);
-    try {
-      localStorage.setItem("app_lang", newLang);
-    } catch {
-      // Ignore localStorage write error
+    if (newLang === lang) return;
+
+    // Persist preference in cookie & localStorage
+    if (typeof document !== "undefined") {
+      try {
+        localStorage.setItem("app_lang", newLang);
+        document.cookie = `NEXT_LOCALE=${newLang}; path=/; max-age=31536000; SameSite=Lax`;
+      } catch {
+        // Ignore storage errors
+      }
     }
+
+    // Rewrite path segment: e.g. /id/about -> /en/about or /en -> /id
+    let nextPath = pathname;
+    if (pathname.startsWith("/id/") || pathname === "/id") {
+      nextPath = pathname.replace(/^\/id(?=\/|$)/, `/${newLang}`);
+    } else if (pathname.startsWith("/en/") || pathname === "/en") {
+      nextPath = pathname.replace(/^\/en(?=\/|$)/, `/${newLang}`);
+    } else {
+      nextPath = `/${newLang}${pathname.startsWith("/") ? pathname : `/${pathname}`}`;
+    }
+
+    router.push(nextPath);
   };
 
   const toggleLang = () => {
-    const next = lang === "en" ? "id" : "en";
-    setLang(next);
+    setLang(lang === "en" ? "id" : "en");
   };
 
   return (

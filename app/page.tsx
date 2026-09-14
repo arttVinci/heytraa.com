@@ -1,5 +1,5 @@
-import { HomeView } from "@/features/home";
+import { redirect } from "next/navigation";
 
-export default function HomePage() {
-  return <HomeView />;
+export default function RootPage() {
+  redirect("/id");
 }

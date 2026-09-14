@@ -138,7 +138,7 @@ export function HeroCard() {
 
         {/* CTAs with Magic UI Ripple Button */}
         <div className="mt-6 flex flex-wrap items-center gap-3 pt-1">
-          <Link href="/projects">
+          <Link href={`/${lang}/projects`}>
             <RippleButton
               rippleColor="rgba(255, 255, 255, 0.6)"
               className="bg-gradient-to-r from-[#689F99] to-[#558680] hover:from-[#588c86] hover:to-[#4a7570] text-white shadow-md shadow-[#689F99]/25 text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl border-0"
@@ -150,7 +150,7 @@ export function HeroCard() {
             </RippleButton>
           </Link>
 
-          <Link href="/services">
+          <Link href={`/${lang}/services`}>
             <RippleButton
               rippleColor="rgba(104, 159, 153, 0.25)"
               className="bg-white dark:bg-slate-800 hover:bg-[#F5F8F9] dark:hover:bg-slate-700 text-[#2D3342] dark:text-slate-200 hover:text-[#689F99] dark:hover:text-[#689F99] border border-slate-200 dark:border-slate-700 text-xs sm:text-sm font-medium px-4 py-2.5 rounded-xl shadow-xs"
@@ -160,7 +160,7 @@ export function HeroCard() {
             </RippleButton>
           </Link>
 
-          <Link href="/about">
+          <Link href={`/${lang}/about`}>
             <RippleButton
               rippleColor="rgba(104, 159, 153, 0.2)"
               className="bg-transparent hover:bg-[#F5F8F9] dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-[#2D3342] dark:hover:text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-xl border border-transparent hover:border-slate-200 dark:hover:border-slate-700"

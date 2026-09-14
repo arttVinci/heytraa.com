@@ -35,12 +35,12 @@ export function SidebarNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems: NavItem[] = [
-    { label: lang === "id" ? "Beranda" : "Home", href: "/", icon: Home },
-    { label: lang === "id" ? "Tentang" : "About", href: "/about", icon: User },
-    { label: lang === "id" ? "Pengalaman" : "Experience", href: "/experience", icon: Briefcase },
-    { label: lang === "id" ? "Proyek" : "Projects", href: "/projects", icon: Folder },
-    { label: lang === "id" ? "Layanan" : "Services", href: "/services", icon: Sparkles },
-    { label: lang === "id" ? "Kontak" : "Contact", href: "/contact", icon: Send },
+    { label: lang === "id" ? "Beranda" : "Home", href: `/${lang}`, icon: Home },
+    { label: lang === "id" ? "Tentang" : "About", href: `/${lang}/about`, icon: User },
+    { label: lang === "id" ? "Pengalaman" : "Experience", href: `/${lang}/experience`, icon: Briefcase },
+    { label: lang === "id" ? "Proyek" : "Projects", href: `/${lang}/projects`, icon: Folder },
+    { label: lang === "id" ? "Layanan" : "Services", href: `/${lang}/services`, icon: Sparkles },
+    { label: lang === "id" ? "Kontak" : "Contact", href: `/${lang}/contact`, icon: Send },
   ];
 
   // Close mobile menu on resize to desktop
@@ -86,10 +86,10 @@ export function SidebarNavbar() {
       <nav className="flex flex-col w-full gap-1" aria-label="Main Navigation">
         {navItems.map((item) => {
           const Icon = item.icon;
-          const isActive =
-            item.href === "/"
-              ? pathname === "/"
-              : pathname.startsWith(item.href);
+          const isHome = item.href === `/${lang}`;
+          const isActive = isHome
+            ? pathname === `/${lang}` || pathname === `/${lang}/`
+            : pathname.startsWith(item.href);
 
           return (
             <Link
@@ -108,18 +108,22 @@ export function SidebarNavbar() {
               <div className="flex items-center gap-2.5">
                 <Icon
                   className={cn(
-                    "w-3.5 h-3.5 transition-transform duration-200 group-hover:scale-110",
+                    "w-4 h-4 transition-colors",
                     isActive
                       ? "text-white"
-                      : "text-slate-400 group-hover:text-[#689F99]",
+                      : "text-slate-400 dark:text-slate-500 group-hover:text-[#689F99]",
                   )}
                 />
                 <span>{item.label}</span>
               </div>
-
-              {isActive && (
-                <ChevronRight className="w-3.5 h-3.5 text-white/90 animate-in fade-in slide-in-from-left-1 duration-200" />
-              )}
+              <ChevronRight
+                className={cn(
+                  "w-3.5 h-3.5 transition-transform duration-200",
+                  isActive
+                    ? "text-white/80 translate-x-0.5"
+                    : "text-slate-300 dark:text-slate-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5",
+                )}
+              />
             </Link>
           );
         })}
