@@ -5,6 +5,7 @@ import { SidebarNavbar, BackgroundGrid } from "@/shared/components/layout";
 import { AssistantChat } from "@/features/assistant";
 import { ClickSpark } from "@/shared/components/click-spark";
 import { SmoothCursor } from "@/shared/components/smooth-cursor";
+import { LanguageProvider } from "@/shared/context/language-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,16 +34,37 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('theme');
+                  var isDark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                  if (isDark) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[#f8fafc] dark:bg-[#090e17] text-[#2D3342] dark:text-[#F5F8F9] selection:bg-[#689F99] selection:text-white relative transition-colors duration-300">
-        <SmoothCursor />
-        <BackgroundGrid />
-        <ClickSpark />
+        <LanguageProvider>
+          <SmoothCursor />
+          <BackgroundGrid />
+          <ClickSpark />
 
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-2.5 sm:px-[23px] lg:px-[39px] xl:px-[47px] pt-20 lg:pt-10 pb-28 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch flex-1">
-          <SidebarNavbar />
-          <main className="flex-1 w-full min-w-0">{children}</main>
-        </div>
-        <AssistantChat />
+          <div className="relative z-10 w-full max-w-[1400px] mx-auto px-2.5 sm:px-[23px] lg:px-[39px] xl:px-[47px] pt-20 lg:pt-10 pb-28 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch flex-1">
+            <SidebarNavbar />
+            <main className="flex-1 w-full min-w-0">{children}</main>
+          </div>
+          <AssistantChat />
+        </LanguageProvider>
       </body>
     </html>
   );

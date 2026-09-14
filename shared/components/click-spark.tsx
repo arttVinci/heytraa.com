@@ -22,8 +22,9 @@ interface Spark {
   color: string;
 }
 
-const DEFAULT_LIGHT_COLORS = ["#e2e8f0", "#fb923c"];
-const DEFAULT_DARK_COLORS = ["#ffffff", "#fb923c"];
+// Theme-aligned palettes matching brand colors (#689F99, #52837d, #88C0B9, #2D3342, #F5F8F9)
+const DEFAULT_LIGHT_COLORS = ["#689F99", "#52837d", "#88C0B9", "#2D3342"];
+const DEFAULT_DARK_COLORS = ["#689F99", "#88C0B9", "#AEE6DE", "#F5F8F9"];
 
 export function ClickSpark({
   sparkColor,
@@ -126,8 +127,8 @@ export function ClickSpark({
         const isDark =
           typeof document !== "undefined" &&
           document.documentElement.classList.contains("dark");
-        ctx.shadowColor = isDark ? spark.color : "rgba(15, 23, 42, 0.45)";
-        ctx.shadowBlur = isDark ? 4 : 2.5;
+        ctx.shadowColor = isDark ? spark.color : "rgba(104, 159, 153, 0.45)";
+        ctx.shadowBlur = isDark ? 6 : 3;
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
