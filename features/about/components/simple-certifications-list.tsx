@@ -108,23 +108,6 @@ export function SimpleCertificationsList() {
                 <span className="text-slate-400 dark:text-slate-500 mr-1.5">ID:</span>
                 {cert.credentialId}
               </div>
-
-              {/* Skill chips */}
-              <div className="flex flex-wrap gap-1 pt-0.5">
-                {cert.skills.slice(0, 3).map((s, i) => (
-                  <span
-                    key={i}
-                    className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60"
-                  >
-                    {s}
-                  </span>
-                ))}
-                {cert.skills.length > 3 && (
-                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-md text-slate-400">
-                    +{cert.skills.length - 3}
-                  </span>
-                )}
-              </div>
             </div>
 
             {/* Bottom action row */}
