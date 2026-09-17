@@ -13,11 +13,11 @@ export function SimpleProfileStory() {
   return (
     <section className="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md p-6 sm:p-7 md:p-8 shadow-2xs transition-colors duration-200">
       {/* Header */}
-      <div className="space-y-1">
-        <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9]">
+      <div className="space-y-1.5">
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9]">
           {lang === "id" ? "Tentang" : "About"}
         </h1>
-        <p className="text-xs sm:text-[13px] text-slate-500 dark:text-slate-400">
+        <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400">
           {lang === "id"
             ? "Pengenalan singkat mengenai siapa saya dan apa yang saya bangun."
             : "A brief introduction to who I am and what I engineer."}
@@ -25,10 +25,10 @@ export function SimpleProfileStory() {
       </div>
 
       {/* Subtle Dashed Divider */}
-      <div className="w-full border-t border-dashed border-slate-200 dark:border-slate-800 my-4 sm:my-5" />
+      <div className="w-full border-t border-dashed border-slate-200 dark:border-slate-800 my-5 sm:my-6" />
 
-      {/* Narrative Body - Clean, elegant editorial flow without excessive bolding */}
-      <div className="space-y-3.5 text-xs sm:text-[13.5px] text-slate-600 dark:text-slate-300 leading-relaxed">
+      {/* Narrative Body - Readable, comfortable editorial flow */}
+      <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed sm:leading-8">
         <p>
           {lang === "id"
             ? "Saya Putra Rizky Nugraha, seorang Fullstack Developer yang berbasis di Bekasi, Jawa Barat. Perjalanan saya di dunia teknologi bermula dari latar belakang teknisi pemeliharaan elektrikal dan elektronika industri. Pengalaman langsung di lapangan membentuk etos kerja saya: disiplin troubleshooting yang ketat, analisis akar masalah yang presisi, dan komitmen tinggi terhadap keandalan sistem."
@@ -49,10 +49,10 @@ export function SimpleProfileStory() {
 
         {/* Warm Sign-Off with Handwritten Signature */}
         <div className="pt-3">
-          <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+          <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
             {lang === "id" ? "Salam hangat," : "Warm regards,"}
           </p>
-          <p className="font-[family-name:var(--font-caveat)] font-bold text-3xl sm:text-4xl text-[#689F99] dark:text-[#88C0B9] tracking-wide mt-0.5 select-none">
+          <p className="font-[family-name:var(--font-caveat)] font-bold text-4xl sm:text-5xl text-[#689F99] dark:text-[#88C0B9] tracking-wide mt-1 select-none">
             putra.
           </p>
         </div>
