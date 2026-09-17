@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import {
-  Sparkles,
   ExternalLink,
   X,
   Layers,
@@ -13,9 +12,11 @@ import {
 } from "lucide-react";
 import { GithubIcon } from "@/shared/components/icons";
 import { InfiniteSpiral, InfiniteSpiralItem } from "@/shared/components/InfiniteSpiral";
+import { useLanguage } from "@/shared/context/language-context";
 import { showcaseProjects, ShowcaseProject } from "../data/showcase-projects";
 
 export function ProjectSpiralShowcase() {
+  const { lang } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<ShowcaseProject | null>(null);
 
   // We repeat the projects to form an endless, seamless looping 3D helix
@@ -40,19 +41,20 @@ export function ProjectSpiralShowcase() {
       <div className="relative overflow-hidden rounded-3xl border border-[#689F99]/25 dark:border-[#689F99]/20 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md p-6 sm:p-8 shadow-md shadow-[#2D3342]/5 dark:shadow-black/30 transition-colors duration-300">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#689F99]/10 border border-[#689F99]/30 text-[#689F99] text-[11px] font-semibold tracking-wide">
-              <Sparkles className="w-3 h-3 animate-pulse" />
-              <span className="font-mono uppercase">
-                Featured Products &amp; Systems • 3D Helix
-              </span>
-            </div>
+            <p className="text-xs font-mono font-medium tracking-wider uppercase text-[#689F99]">
+              {lang === "id" ? "Produk & Arsitektur Unggulan" : "Featured Products & Systems"}
+            </p>
 
             <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9] leading-snug">
-              Interactive Product &amp; Architecture Showcase
+              {lang === "id"
+                ? "Showcase Produk & Arsitektur Interaktif"
+                : "Interactive Product & Architecture Showcase"}
             </h2>
 
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Jelajahi portofolio sistem backend Golang berskala produksi, platform AI terintegrasi Qdrant, dan aplikasi full-stack modern.
+              {lang === "id"
+                ? "Jelajahi portofolio sistem backend Golang berskala produksi, platform AI terintegrasi Qdrant, dan aplikasi full-stack modern."
+                : "Explore production-grade Golang backend systems, Qdrant-integrated AI platforms, and modern full-stack apps."}
             </p>
           </div>
 

@@ -43,7 +43,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     image:
       "https://res.cloudinary.com/dvlhr7x7f/image/upload/v1789301228/Cuplikan_layar_2026-09-13_184347_ejhmsx.png",
     description:
-      "Portofy membantu mahasiswa, freelancer, dan kreator Indonesia tampil profesional di dunia digital — dengan AI yang menulis, menganalisis, dan memberi saran langsung untuk portofoliomu dari CV tanpa perlu coding.",
+      "Portofy membantu mahasiswa, freelancer, dan kreator Indonesia tampil profesional di dunia digital - dengan AI yang menulis, menganalisis, dan memberi saran langsung untuk portofoliomu dari CV tanpa perlu coding.",
     architecture: [
       "Golang Clean Architecture Backend: Scalable RESTful API dengan performa tinggi dan konkurensi efisien.",
       "Dynamic Editor Frontend: Antarmuka pengguna responsif dan interaktif menggunakan React dan TypeScript.",

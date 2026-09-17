@@ -7,7 +7,6 @@ import {
   Terminal,
   Database,
   Boxes,
-  Cpu,
 } from "lucide-react";
 import { Marquee } from "@/shared/components/marquee";
 import { TechIcon } from "@/shared/components/tech-icons";
@@ -26,54 +25,33 @@ export function TechStackSection() {
   return (
     <section
       id="tech-stack"
-      className="relative overflow-hidden rounded-3xl border border-[#689F99]/25 dark:border-[#689F99]/20 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md p-6 sm:p-8 shadow-md shadow-[#2D3342]/5 dark:shadow-black/30 transition-colors duration-300 space-y-7"
+      className="relative py-4 sm:py-6 px-1 space-y-8 transition-colors duration-300"
     >
-      {/* Soft Ambient Background Glows */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-16 -right-16 w-80 h-80 rounded-full bg-gradient-to-bl from-[#689F99]/15 via-[#689F99]/5 to-transparent dark:from-[#689F99]/10 blur-3xl" />
-        <div className="absolute -bottom-20 -left-16 w-72 h-72 rounded-full bg-gradient-to-tr from-[#689F99]/10 via-transparent to-transparent dark:from-cyan-900/10 blur-2xl" />
-      </div>
-
       {/* 1. Header Section */}
-      <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div className="space-y-2 max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#689F99]/10 border border-[#689F99]/30 text-[#689F99] text-[11px] font-semibold tracking-wide">
-            <Cpu className="w-3.5 h-3.5 text-[#689F99] animate-pulse" />
-            <span className="font-mono uppercase">
-              {lang === "id"
-                ? "Kapabilitas Rekayasa • Sistem Produksi & Riset AI"
-                : "Engineered Capabilities • Production & Active Research"}
-            </span>
-          </div>
+      <div className="border-b border-slate-200/80 dark:border-slate-800/80 pb-5">
+        <div className="space-y-1.5">
+          <p className="text-xs font-mono font-medium tracking-wider uppercase text-[#689F99]">
+            {lang === "id"
+              ? "Kapabilitas Rekayasa"
+              : "Engineered Capabilities"}
+          </p>
 
-          <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9] leading-snug">
+          <h2 className="text-xl sm:text-2xl lg:text-[26px] font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9]">
             {lang === "id"
               ? "Tech Stack & Fokus Arsitektur"
               : "Tech Stack & Architectural Focus"}
           </h2>
 
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
             {lang === "id"
               ? "Spesialisasi backend Golang berkonkurensi tinggi & database, rekayasa web modern type-safe, dan eksplorasi aktif sistem AI agentik."
               : "Specialized in high-concurrency Golang backend & databases, type-safe modern web engineering, and active agentic AI exploration."}
           </p>
         </div>
-
-        {/* Total Stack Counter Badge */}
-        <div className="flex items-center gap-2 text-[11px] font-mono shrink-0">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#689F99]/10 dark:bg-[#689F99]/15 border border-[#689F99]/30 text-[#689F99] dark:text-[#689F99] font-medium shadow-xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#689F99] animate-pulse" />
-            <span>
-              {lang === "id"
-                ? `${techStackItems.length} Teknologi & Alat`
-                : `${techStackItems.length} Technologies & Tools`}
-            </span>
-          </span>
-        </div>
       </div>
 
       {/* 2. Magic UI Marquee Ticker (Logo Icon & Title Only) */}
-      <div className="relative z-10 overflow-hidden rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/60 p-1.5">
+      <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm p-1.5">
         <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-20 bg-gradient-to-r from-white/95 dark:from-slate-900/90 to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-20 bg-gradient-to-l from-white/95 dark:from-slate-900/90 to-transparent z-10" />
 
@@ -96,7 +74,7 @@ export function TechStackSection() {
       </div>
 
       {/* 3. Balanced Bento Grid (Row 1: 50/50, Row 2: 33/33/33) */}
-      <div className="relative z-10 space-y-5">
+      <div className="relative space-y-5">
         
         {/* ROW 1: BACKEND (50%) & AI/LLM (50%) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

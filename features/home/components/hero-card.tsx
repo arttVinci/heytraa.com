@@ -40,13 +40,12 @@ export function HeroCard() {
       </div>
 
       <div className="relative z-10">
-        {/* Eyebrow badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#689F99]/10 dark:bg-[#689F99]/15 border border-[#689F99]/30 text-[#689F99] dark:text-[#689F99] text-[11px] font-semibold tracking-wide mb-4">
-          <span className="w-2 h-2 rounded-full bg-[#689F99] animate-pulse" />
-          <span className="font-mono uppercase">
-            Full-Stack • AI-Agent-Driven Workflow
-          </span>
-        </div>
+        {/* Eyebrow */}
+        <p className="text-xs font-mono font-medium tracking-wider uppercase text-[#689F99] mb-3">
+          {lang === "id"
+            ? "Rekayasa Sistem Full-Stack & Agen AI"
+            : "Full-Stack & AI-Agent Systems Engineering"}
+        </p>
 
         {/* Display Headline with Highlighter */}
         <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9] leading-[1.25]">
@@ -106,7 +105,7 @@ export function HeroCard() {
               <span className="font-medium text-[#2D3342] dark:text-white">
                 React/TypeScript
               </span>{" "}
-              — tervalidasi melalui magang REST API e-commerce siap produksi. Saat ini terus memperdalam konsep AI/LLM, mengeksplorasi RAG, vector database, LangChain, LangGraph, dan fine-tuning LoRA melalui proyek open-source aktif. Berdedikasi tinggi dan berkomitmen penuh membangun karier di bidang software engineering.
+              - tervalidasi melalui magang REST API e-commerce siap produksi. Saat ini terus memperdalam konsep AI/LLM, mengeksplorasi RAG, vector database, LangChain, LangGraph, dan fine-tuning LoRA melalui proyek open-source aktif. Berdedikasi tinggi dan berkomitmen penuh membangun karier di bidang software engineering.
             </>
           ) : (
             <>
@@ -127,7 +126,7 @@ export function HeroCard() {
               <span className="font-medium text-[#2D3342] dark:text-white">
                 React/TypeScript
               </span>{" "}
-              frontend — validated through a production-ready e-commerce REST API
+              frontend - validated through a production-ready e-commerce REST API
               internship. Currently expanding my knowledge into AI/LLM concepts,
               exploring RAG, vector databases, LangChain, LangGraph, and LoRA
               fine-tuning through an active open-source project. Self-driven and
