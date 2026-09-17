@@ -17,6 +17,7 @@
     "hooks": "@/shared/hooks"
   },
   "registries": {
-    "@react-bits": "https://reactbits.dev/r/{name}.json"
+    "@react-bits": "https://reactbits.dev/r/{name}.json",
+    "@reui": "https://reui.io/r/{style}/{name}.json"
   }
 }
