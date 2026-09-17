@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Home,
   User,
-  Award,
   Folder,
   Send,
   ChevronRight,
@@ -36,11 +34,31 @@ export function SidebarNavbar() {
 
   const navItems: NavItem[] = [
     { label: lang === "id" ? "Beranda" : "Home", href: `/${lang}`, icon: Home },
-    { label: lang === "id" ? "Tentang" : "About", href: `/${lang}/about`, icon: User },
-    { label: lang === "id" ? "Pengalaman" : "Experience", href: `/${lang}/experience`, icon: Briefcase },
-    { label: lang === "id" ? "Proyek" : "Projects", href: `/${lang}/projects`, icon: Folder },
-    { label: lang === "id" ? "Layanan" : "Services", href: `/${lang}/services`, icon: Sparkles },
-    { label: lang === "id" ? "Kontak" : "Contact", href: `/${lang}/contact`, icon: Send },
+    {
+      label: lang === "id" ? "Tentang" : "About",
+      href: `/${lang}/about`,
+      icon: User,
+    },
+    {
+      label: lang === "id" ? "Pengalaman" : "Experience",
+      href: `/${lang}/experience`,
+      icon: Briefcase,
+    },
+    {
+      label: lang === "id" ? "Proyek" : "Projects",
+      href: `/${lang}/projects`,
+      icon: Folder,
+    },
+    {
+      label: lang === "id" ? "Layanan" : "Services",
+      href: `/${lang}/services`,
+      icon: Sparkles,
+    },
+    {
+      label: lang === "id" ? "Kontak" : "Contact",
+      href: `/${lang}/contact`,
+      icon: Send,
+    },
   ];
 
   // Close mobile menu on resize to desktop

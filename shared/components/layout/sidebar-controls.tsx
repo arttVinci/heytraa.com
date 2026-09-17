@@ -1,24 +1,37 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useSyncExternalStore } from "react";
 import { Sun, Moon, FileDown } from "lucide-react";
 import { useLanguage } from "@/shared/context/language-context";
 import { cn } from "@/shared/lib/utils";
 
+const emptySubscribe = () => () => {};
+
 export function SidebarControls() {
   const { lang, setLang } = useLanguage();
-  const [isDark, setIsDark] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-    const hasDarkClass = document.documentElement.classList.contains("dark");
-    setIsDark(hasDarkClass);
-  }, []);
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
+
+  const isDark = useSyncExternalStore(
+    (onStoreChange) => {
+      if (typeof window === "undefined") return () => {};
+      const observer = new MutationObserver(onStoreChange);
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+      return () => observer.disconnect();
+    },
+    () => (typeof document !== "undefined" ? document.documentElement.classList.contains("dark") : false),
+    () => false
+  );
 
   const toggleTheme = () => {
     const nextDark = !isDark;
-    setIsDark(nextDark);
     if (nextDark) {
       document.documentElement.classList.add("dark");
       try {

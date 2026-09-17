@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import { SidebarNavbar, BackgroundGrid } from "@/shared/components/layout";
+import { ThemeInitializer } from "@/shared/components/layout/theme-initializer";
 import { AssistantChat } from "@/features/assistant";
 import { ClickSpark } from "@/shared/components/click-spark";
 import { SmoothCursor } from "@/shared/components/smooth-cursor";
@@ -15,6 +16,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  weight: ["700"],
 });
 
 export const metadata: Metadata = {
@@ -31,29 +38,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var saved = localStorage.getItem('theme');
-                  var isDark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
-                  if (isDark) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch(e) {}
-              })();
-            `,
-          }}
-        />
-      </head>
       <body className="min-h-full flex flex-col bg-[#f8fafc] dark:bg-[#090e17] text-[#2D3342] dark:text-[#F5F8F9] selection:bg-[#689F99] selection:text-white relative transition-colors duration-300">
+        <ThemeInitializer />
         <LanguageProvider>
           <SmoothCursor />
           <BackgroundGrid />

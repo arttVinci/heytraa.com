@@ -4,39 +4,39 @@
 
 :root {
   --background: #f8fafc;
-  --foreground: #2D3342;
+  --foreground: #2d3342;
   --card: #ffffff;
-  --card-foreground: #2D3342;
+  --card-foreground: #2d3342;
   --border: #e2e8f0;
-  --brand-teal: #689F99;
-  --brand-dark: #2D3342;
-  --brand-light: #F5F8F9;
-  --brand-blue: #689F99;
-  --brand-blue-light: #F5F8F9;
-  --brand-blue-gradient: linear-gradient(135deg, #689F99 0%, #52837d 100%);
+  --brand-teal: #689f99;
+  --brand-dark: #2d3342;
+  --brand-light: #f5f8f9;
+  --brand-blue: #689f99;
+  --brand-blue-light: #f5f8f9;
+  --brand-blue-gradient: linear-gradient(135deg, #689f99 0%, #52837d 100%);
 }
 
 .dark {
   --background: #090e17;
-  --foreground: #F5F8F9;
+  --foreground: #f5f8f9;
   --card: #0f172a;
-  --card-foreground: #F5F8F9;
+  --card-foreground: #f5f8f9;
   --border: #1e293b;
-  --brand-teal: #689F99;
-  --brand-dark: #2D3342;
-  --brand-light: #F5F8F9;
-  --brand-blue: #689F99;
+  --brand-teal: #689f99;
+  --brand-dark: #2d3342;
+  --brand-light: #f5f8f9;
+  --brand-blue: #689f99;
   --brand-blue-light: #163633;
-  --brand-blue-gradient: linear-gradient(135deg, #689F99 0%, #52837d 100%);
+  --brand-blue-gradient: linear-gradient(135deg, #689f99 0%, #52837d 100%);
 }
 
 /* Rule: Semua headings menggunakan #2D3342 bukan hitam pekat */
 :where(h1, h2, h3, h4, h5, h6) {
-  color: #2D3342;
+  color: #2d3342;
 }
 
 .dark :where(h1, h2, h3, h4, h5, h6) {
-  color: #F5F8F9;
+  color: #f5f8f9;
 }
 
 body {
