@@ -10,6 +10,7 @@ import {
   X,
   Calendar,
   CheckCircle2,
+  Maximize2,
 } from "lucide-react";
 import { useLanguage } from "@/shared/context/language-context";
 import {
@@ -74,12 +75,11 @@ export function SimpleCertificationsList() {
                     alt={cert.title[lang]}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover object-top transition-transform duration-300 group-hover/img:scale-105"
+                    className="object-cover object-top transition-transform duration-300 ease-out group-hover/img:scale-[1.03]"
                   />
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-[#2D3342]/50 opacity-0 group-hover/img:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-1.5 text-white text-xs font-semibold backdrop-blur-[2px]">
-                    <Eye className="w-4 h-4" />
-                    <span>{lang === "id" ? "Lihat Sertifikat" : "Preview"}</span>
+                  {/* Subtle Elegant Expand Icon on Top-Right */}
+                  <div className="absolute top-2 right-2 w-7 h-7 rounded-lg bg-black/50 text-white backdrop-blur-md flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xs">
+                    <Maximize2 className="w-3.5 h-3.5" />
                   </div>
                 </div>
               )}
