@@ -20,6 +20,7 @@ export interface StructuredExperienceItem {
     en: string;
   };
   initials: string;
+  logo?: string;
   accentColor?: string;
   tasks: {
     id: string[];
@@ -54,6 +55,7 @@ export interface StructuredEducationItem {
   };
   gpaOrScore?: string;
   initials: string;
+  logo?: string;
   description: {
     id: string;
     en: string;
@@ -91,7 +93,7 @@ export const simpleExperienceData: StructuredExperienceItem[] = [
       id: "Teknisi Elektrikal & Maintenance",
       en: "Maintenance & Electrical Technician",
     },
-    company: "PT Serta Kuliner Mandiri",
+    company: "PT Setya Kuliner Mandiri",
     location: "Bekasi, Indonesia ID",
     period: "Des 2023 - Sekarang",
     duration: {
@@ -107,6 +109,7 @@ export const simpleExperienceData: StructuredExperienceItem[] = [
       en: "Onsite",
     },
     initials: "SKM",
+    logo: "/images/experience/skm.jpg",
     accentColor: "#689F99",
     tasks: {
       id: [
@@ -165,6 +168,7 @@ export const simpleExperienceData: StructuredExperienceItem[] = [
       en: "Hybrid",
     },
     initials: "UG",
+    logo: "/images/experience/gunadarma.jpg",
     accentColor: "#38bdf8",
     tasks: {
       id: [
@@ -221,6 +225,7 @@ export const simpleExperienceData: StructuredExperienceItem[] = [
       en: "Remote",
     },
     initials: "EVM",
+    logo: "/images/experience/evermos.jpg",
     accentColor: "#689F99",
     tasks: {
       id: [
@@ -279,6 +284,7 @@ export const simpleExperienceData: StructuredExperienceItem[] = [
       en: "Onsite",
     },
     initials: "ABI",
+    logo: "/images/experience/akebono.jpg",
     accentColor: "#689F99",
     tasks: {
       id: [
@@ -334,6 +340,7 @@ export const simpleEducationData: StructuredEducationItem[] = [
       en: "In Progress",
     },
     initials: "UT",
+    logo: "/images/education/univ-terbuka.jpg",
     description: {
       id: "Mendalami rekayasa sistem informasi enterprise, perancangan database relasional ACID, analisis proses bisnis, arsitektur data, dan manajemen proyek perangkat lunak.",
       en: "Studying enterprise information systems, relational database architecture (ACID), business process modeling, data engineering, and software project management.",
@@ -370,6 +377,7 @@ export const simpleEducationData: StructuredEducationItem[] = [
     },
     gpaOrScore: "83",
     initials: "SMK",
+    logo: "/images/education/smkn5-bekasi.jpg",
     description: {
       id: "Membangun fondasi logika berpikir sistematis, troubleshooting sirkuit terpadu, mikrokontroler, otomasi industri, dan kedisiplinan standar keselamatan kerja (K3).",
       en: "Built systematic troubleshooting foundations, integrated circuits, microcontrollers, industrial automation, and occupational safety (K3) discipline.",
@@ -390,6 +398,79 @@ export const simpleEducationData: StructuredEducationItem[] = [
 ];
 
 export const simpleCertificationsData: StructuredCertificationItem[] = [
+  {
+    id: "cert-google-ai",
+    title: {
+      id: "Google AI Professional Certificate",
+      en: "Google AI Professional Certificate",
+    },
+    issuer: "Google & Coursera",
+    year: "2026",
+    issuedDate: "September 2026",
+    credentialId: "Mn3TUzi9",
+    credentialUrl: "https://www.credly.com/go/Mn3TUzi9",
+    image: "/images/certificate/sertif-google-ai.png",
+    isPlaceholder: false,
+    status: {
+      id: "Tervalidasi",
+      en: "Verified",
+    },
+    skills: [
+      "Google AI",
+      "Generative AI",
+      "Machine Learning",
+      "Prompt Engineering",
+      "Large Language Models",
+    ],
+  },
+  {
+    id: "cert-juara-vibe-coding",
+    title: {
+      id: "Vibe Coding Study Jam - #JuaraVibeCoding Participant",
+      en: "Vibe Coding Study Jam - #JuaraVibeCoding Participant",
+    },
+    issuer: "Google Developer Groups",
+    year: "2026",
+    issuedDate: "Mei 2026",
+    credentialId: "JVC2605-LQ82-7R33",
+    credentialUrl: "https://goo.gle/jvc-cert-verifier",
+    image: "/images/certificate/sertif-juara-vibe-coding.png",
+    isPlaceholder: false,
+    status: {
+      id: "Tervalidasi",
+      en: "Verified",
+    },
+    skills: [
+      "AI Coding",
+      "Rapid Prototyping",
+      "Prompt Engineering",
+      "Developer Community",
+    ],
+  },
+  {
+    id: "cert-oracle-ai-agent",
+    title: {
+      id: "Oracle Fusion AI Agent Studio Certified Foundations Associate - Rel 1",
+      en: "Oracle Fusion AI Agent Studio Certified Foundations Associate - Rel 1",
+    },
+    issuer: "Oracle University",
+    year: "2026",
+    issuedDate: "Januari 2026",
+    credentialId: "Oracle Certified Foundations Associate",
+    credentialUrl: "/images/certificate/sertif-oracle-ai-agent.jpg",
+    image: "/images/certificate/sertif-oracle-ai-agent.jpg",
+    isPlaceholder: false,
+    status: {
+      id: "Tervalidasi",
+      en: "Verified",
+    },
+    skills: [
+      "AI Agents",
+      "Oracle Fusion",
+      "AI Agent Studio",
+      "Enterprise AI",
+    ],
+  },
   {
     id: "cert-go-coursera",
     title: {

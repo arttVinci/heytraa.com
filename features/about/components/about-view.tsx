@@ -7,7 +7,7 @@ import { SimpleProfileStory } from "./simple-profile-story";
 import { SimpleExperienceList } from "./simple-experience-list";
 import { SimpleEducationList } from "./simple-education-list";
 import { SimpleCertificationsList } from "./simple-certifications-list";
-import { FooterSection } from "@/features/home/components/footer-section";
+import { FooterSection } from "@/shared/components/layout";
 
 /**
  * AboutView (Clean, Minimalist, & Structured layout inspired by user reference)
@@ -38,7 +38,7 @@ export function AboutView() {
   );
 
   return (
-    <div ref={containerRef} className="space-y-8 sm:space-y-10">
+    <div ref={containerRef} className="space-y-6 sm:space-y-8">
       {/* 1. Background / Profil Diri */}
       <div className="about-section-block">
         <SimpleProfileStory />

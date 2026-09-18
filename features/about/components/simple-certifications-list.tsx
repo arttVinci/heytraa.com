@@ -11,7 +11,9 @@ import {
   Calendar,
   CheckCircle2,
   Maximize2,
+  ChevronDown,
 } from "lucide-react";
+import { cn } from "@/shared/lib/utils";
 import { useLanguage } from "@/shared/context/language-context";
 import {
   simpleCertificationsData,
@@ -27,6 +29,13 @@ export function SimpleCertificationsList() {
   const { lang } = useLanguage();
   const [selectedCert, setSelectedCert] =
     useState<StructuredCertificationItem | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const INITIAL_COUNT = 6;
+  const visibleCertifications = showAll
+    ? simpleCertificationsData
+    : simpleCertificationsData.slice(0, INITIAL_COUNT);
+  const remainingCount = simpleCertificationsData.length - INITIAL_COUNT;
 
   return (
     <section className="space-y-4 sm:space-y-5">
@@ -35,7 +44,7 @@ export function SimpleCertificationsList() {
         <div>
           <div className="flex items-center gap-2.5">
             <Award className="w-5 h-5 sm:w-6 sm:h-6 text-[#689F99]" />
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9]">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#2D3342] dark:text-[#F5F8F9]">
               {lang === "id" ? "Sertifikasi & Kredensial" : "Certifications & Credentials"}
             </h2>
           </div>
@@ -58,10 +67,10 @@ export function SimpleCertificationsList() {
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-        {simpleCertificationsData.map((cert) => (
+        {visibleCertifications.map((cert) => (
           <div
             key={cert.id}
-            className="flex flex-col justify-between rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md p-4 sm:p-5 shadow-2xs hover:border-[#689F99]/40 transition-all duration-200 group"
+            className="flex flex-col justify-between rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md p-3.5 sm:p-4 shadow-2xs hover:border-[#689F99]/40 transition-all duration-200 group"
           >
             <div className="space-y-3.5">
               {/* Image Preview Thumbnail */}
@@ -98,7 +107,7 @@ export function SimpleCertificationsList() {
 
               {/* Title */}
               <div>
-                <h3 className="text-sm sm:text-base font-bold text-[#2D3342] dark:text-[#F5F8F9] leading-snug line-clamp-2">
+                <h3 className="text-sm sm:text-base font-semibold text-[#2D3342] dark:text-[#F5F8F9] leading-snug line-clamp-2">
                   {cert.title[lang]}
                 </h3>
               </div>
@@ -111,7 +120,7 @@ export function SimpleCertificationsList() {
             </div>
 
             {/* Bottom action row */}
-            <div className="mt-4 pt-3.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs sm:text-sm">
+            <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs sm:text-sm">
               <button
                 type="button"
                 onClick={() => setSelectedCert(cert)}
@@ -142,6 +151,33 @@ export function SimpleCertificationsList() {
         ))}
       </div>
 
+      {/* See All / Show Less Toggle Button */}
+      {simpleCertificationsData.length > INITIAL_COUNT && (
+        <div className="flex justify-center pt-2">
+          <button
+            type="button"
+            onClick={() => setShowAll((prev) => !prev)}
+            className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200/90 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-[#689F99] dark:hover:text-[#689F99] hover:border-[#689F99]/40 dark:hover:border-[#689F99]/40 shadow-2xs hover:shadow-xs transition-all duration-200 cursor-pointer select-none"
+          >
+            <span>
+              {showAll
+                ? lang === "id"
+                  ? "Tampilkan lebih sedikit"
+                  : "Show less"
+                : lang === "id"
+                  ? `Lihat semua sertifikat (+${remainingCount})`
+                  : `See all certificates (+${remainingCount})`}
+            </span>
+            <ChevronDown
+              className={cn(
+                "w-4 h-4 text-[#689F99] transition-transform duration-300",
+                showAll && "rotate-180"
+              )}
+            />
+          </button>
+        </div>
+      )}
+
       {/* Certificate Modal Lightbox */}
       {selectedCert && (
         <div
@@ -160,7 +196,7 @@ export function SimpleCertificationsList() {
                 <span className="text-xs font-mono font-semibold text-[#689F99] uppercase tracking-wider">
                   {selectedCert.issuer} • {selectedCert.issuedDate}
                 </span>
-                <h3 className="text-base sm:text-lg font-bold text-[#2D3342] dark:text-[#F5F8F9] leading-snug">
+                <h3 className="text-base sm:text-lg font-semibold text-[#2D3342] dark:text-[#F5F8F9] leading-snug">
                   {selectedCert.title[lang]}
                 </h3>
               </div>

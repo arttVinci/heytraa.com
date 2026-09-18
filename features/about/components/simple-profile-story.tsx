@@ -11,10 +11,10 @@ export function SimpleProfileStory() {
   const { lang } = useLanguage();
 
   return (
-    <section className="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md p-6 sm:p-7 md:p-8 shadow-2xs transition-colors duration-200">
+    <section className="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md p-5 sm:p-6 md:p-7 shadow-2xs transition-colors duration-200">
       {/* Header */}
       <div className="space-y-1.5">
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9]">
+        <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#2D3342] dark:text-[#F5F8F9]">
           {lang === "id" ? "Tentang" : "About"}
         </h1>
         <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400">
@@ -25,37 +25,33 @@ export function SimpleProfileStory() {
       </div>
 
       {/* Subtle Dashed Divider */}
-      <div className="w-full border-t border-dashed border-slate-200 dark:border-slate-800 my-5 sm:my-6" />
+      <div className="w-full border-t border-dashed border-slate-200 dark:border-slate-800 my-3 sm:my-4" />
 
       {/* Narrative Body - Readable, comfortable editorial flow */}
-      <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed sm:leading-8">
+      <div className="space-y-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed sm:leading-7">
         <p>
           {lang === "id"
-            ? "Saya Putra Rizky Nugraha, seorang Fullstack Developer yang berbasis di Bekasi, Jawa Barat. Perjalanan saya di dunia teknologi bermula dari latar belakang teknisi pemeliharaan elektrikal dan elektronika industri. Pengalaman langsung di lapangan membentuk etos kerja saya: disiplin troubleshooting yang ketat, analisis akar masalah yang presisi, dan komitmen tinggi terhadap keandalan sistem."
-            : "I am Putra Rizky Nugraha, a Fullstack Developer based in Bekasi, Indonesia. My journey into technology started with a hands-on background in industrial electrical and electronics maintenance. Working on physical systems ingrained in me a rigorous troubleshooting discipline, rapid root-cause analysis, and an unwavering focus on system uptime and reliability."}
+            ? "Saya adalah seorang Software Engineer yang membangun fondasi teknis secara mandiri sembari bekerja penuh waktu di luar industri teknologi — melalui pembelajaran terarah, eksperimen langsung, dan proyek-proyek riil. Fokus utama saya saat ini adalah backend development menggunakan Golang (Fiber, GORM), menerapkan prinsip Clean Architecture dan Modular Monolith untuk membangun sistem yang scalable dan mudah dipelihara. Di sisi frontend, saya menggunakan React dan TypeScript untuk merancang antarmuka yang responsif dan terstruktur dengan baik. Keterampilan ini telah divalidasi melalui pengalaman magang riil, di mana saya turut membangun REST API e-commerce siap produksi."
+            : "I am an aspiring Software Engineer who has built my technical foundation independently while working full-time outside the tech industry — through self-directed learning, hands-on experimentation, and real-world projects. My primary focus right now is backend development using Golang (Fiber, GORM), applying Clean Architecture and Modular Monolith principles to build systems that are scalable and maintainable. On the frontend side, I use React and TypeScript to build responsive, well-structured interfaces. These skills have been validated through a real internship experience, where I helped build a production-ready e-commerce REST API."}
         </p>
 
         <p>
           {lang === "id"
-            ? "Fokus utama saya adalah merancang sistem backend yang scalable dan modular menggunakan Golang (Go Fiber, GORM) dengan standar Clean Architecture & Modular Monolith, serta membangun antarmuka web modern yang cepat dan responsif menggunakan Next.js, React, dan TypeScript. Saya memegang prinsip bahwa kode yang baik adalah kode yang mudah dipelihara, terisolasi dengan rapi, dan teruji secara fungsional."
-            : "My core focus is engineering modular, high-performance backend systems using Golang (Fiber, GORM) rooted in Clean Architecture and Modular Monolith principles, alongside crafting responsive, type-safe web applications with Next.js, React, and TypeScript. I firmly believe that robust software requires clean separation of concerns, reliable data persistence, and straightforward maintainability."}
+            ? "Jalur saya menuju rekayasa perangkat lunak sebenarnya berawal dari latar belakang yang berbeda — pemeliharaan elektrikal dan elektronika industri — sebelum akhirnya saya memutuskan untuk beralih karier dan mendalami software development secara penuh."
+            : "My path toward software engineering actually started from a different background — electrical/electronics maintenance — before I decided to make a career shift and pursue software development full-on."}
         </p>
 
         <p>
           {lang === "id"
-            ? "Di samping itu, saya aktif mendalami konsep kecerdasan buatan, termasuk pipeline Retrieval-Augmented Generation (RAG), vector database Qdrant, dan orkestrasi alur Multi-Agent LLM melalui proyek-proyek mandiri seperti Fixora dan Portofy. Saya menikmati lingkungan kolaboratif dan selalu antusias belajar hal baru untuk menghasilkan solusi perangkat lunak yang memberikan dampak nyata."
-            : "In addition, I actively explore applied AI concepts, including Retrieval-Augmented Generation (RAG), vector search with Qdrant, and Multi-Agent LLM pipelines through autonomous projects like Fixora and Portofy. I thrive in collaborative environments and am driven by building software that solves practical real-world challenges."}
+            ? "Selain itu, saya aktif mengeksplorasi integrasi AI/LLM ke dalam sistem yang saya bangun, termasuk implementasi Retrieval-Augmented Generation (RAG) dan vector database, yang saya kembangkan melalui proyek open-source pribadi. Beberapa proyek yang saat ini sedang saya kerjakan meliputi aplikasi asisten percakapan AI untuk pelaporan kendala infrastruktur dengan backend Go/Fiber dan integrasi LangGraph, serta bereksperimen membangun tool AI coding CLI sendiri dan infrastruktur self-hosted untuk mendeploy produk yang saya kembangkan."
+            : "Beyond that, I'm also actively exploring AI/LLM integration into the systems I build, including implementing Retrieval-Augmented Generation (RAG) and vector databases, which I've developed through a personal open-source project. Some of the projects I'm currently working on include an AI conversational assistant app for reporting infrastructure issues, with a Go/Fiber backend and LangGraph integration, as well as experimenting with building my own AI coding CLI tool and self-hosted infrastructure for deploying the products I develop."}
         </p>
 
-        {/* Warm Sign-Off with Handwritten Signature */}
-        <div className="pt-3">
-          <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
-            {lang === "id" ? "Salam hangat," : "Warm regards,"}
-          </p>
-          <p className="font-[family-name:var(--font-caveat)] font-bold text-4xl sm:text-5xl text-[#689F99] dark:text-[#88C0B9] tracking-wide mt-1 select-none">
-            putra.
-          </p>
-        </div>
+        <p>
+          {lang === "id"
+            ? "Saya adalah seorang pembelajar mandiri yang terbiasa mengeksplorasi teknologi baru secara independen, serta memiliki komitmen penuh untuk membangun karier jangka panjang sebagai Software Engineer profesional."
+            : "I'm a self-driven learner, accustomed to exploring new technologies independently, and fully committed to building a long-term career as a professional Software Engineer."}
+        </p>
       </div>
     </section>
   );
