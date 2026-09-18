@@ -3,7 +3,7 @@ import { ProjectSpiralShowcase } from "./project-spiral-showcase";
 import { TechStackSection } from "./tech-stack-section";
 import { HowIWorkSection } from "./how-i-work-section";
 import { WhatIDoSection } from "./what-i-do-section";
-import { FooterSection } from "./footer-section";
+import { FooterSection } from "@/shared/components/layout";
 
 export function HomeView() {
   return (

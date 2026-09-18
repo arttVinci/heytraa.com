@@ -1,15 +1,22 @@
 "use client";
 
 import React from "react";
-import { Terminal, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/shared/context/language-context";
 import { GithubIcon, LinkedinIcon, XIcon } from "@/shared/components/icons";
 
 export function FooterSection() {
   const { lang } = useLanguage();
 
+  const scrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="relative pt-2 mb-2">
+    <footer className="relative pt-2 mb-11">
       {/* Outer Rounded Container Card */}
       <div className="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md p-8 sm:p-10 lg:p-12 shadow-xs transition-colors duration-300">
         {/* Top Content Grid */}
@@ -17,19 +24,28 @@ export function FooterSection() {
           {/* Col 1: Brand & Bio (Spans 5 Columns) */}
           <div className="lg:col-span-5 space-y-4">
             {/* Brand Logo & Name */}
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center shadow-xs">
-                <Terminal className="w-4 h-4" />
+            <Link
+              href={`/${lang}`}
+              className="flex items-center gap-3 group w-fit"
+            >
+              <div className="w-9 h-9 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform overflow-hidden">
+                <Image
+                  src="/images/logo-icon.png"
+                  alt="heytraa logo"
+                  width={28}
+                  height={28}
+                  className="dark:invert object-contain select-none"
+                />
               </div>
               <div>
-                <h3 className="text-base font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9]">
+                <h3 className="text-base font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9] group-hover:text-[#689F99] transition-colors">
                   heytraa.com
                 </h3>
                 <p className="text-[10px] font-mono tracking-wider text-[#689F99] font-medium uppercase">
                   @traa_rzkyy · FULLSTACK DEVELOPER
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* Personalized Authentic Bio */}
             <p className="text-xs sm:text-[13px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-sm">
@@ -77,44 +93,44 @@ export function FooterSection() {
             </p>
             <ul className="space-y-2.5 text-xs sm:text-[13px] text-slate-600 dark:text-slate-400">
               <li>
-                <a
-                  href="#what-i-do"
+                <Link
+                  href={`/${lang}#what-i-do`}
                   className="hover:text-[#689F99] dark:hover:text-[#689F99] transition-colors"
                 >
                   {lang === "id"
                     ? "Aplikasi Web & SaaS (Next.js)"
                     : "Web Apps & SaaS (Next.js)"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#what-i-do"
+                <Link
+                  href={`/${lang}#what-i-do`}
                   className="hover:text-[#689F99] dark:hover:text-[#689F99] transition-colors"
                 >
                   {lang === "id"
                     ? "REST API & Backend (Golang)"
                     : "REST APIs & Backend (Golang)"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#what-i-do"
+                <Link
+                  href={`/${lang}#what-i-do`}
                   className="hover:text-[#689F99] dark:hover:text-[#689F99] transition-colors"
                 >
                   {lang === "id"
                     ? "Desain Skema Database & ERD"
                     : "Database & ERD Schema Design"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#what-i-do"
+                <Link
+                  href={`/${lang}#what-i-do`}
                   className="hover:text-[#689F99] dark:hover:text-[#689F99] transition-colors"
                 >
                   {lang === "id"
                     ? "Tugas Kuliah Pemrograman"
                     : "College Coursework & Tasks"}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -127,7 +143,7 @@ export function FooterSection() {
             <ul className="space-y-2.5 text-xs sm:text-[13px] text-slate-600 dark:text-slate-400">
               <li>
                 <a
-                  href="https://github.com/arttVinci/fixora-Backend"
+                  href="https://github.com/arttVinci/fixora"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 hover:text-[#689F99] dark:hover:text-[#689F99] transition-colors"
@@ -180,7 +196,7 @@ export function FooterSection() {
               </li>
               <li>
                 <a
-                  href="https://instagram.com/traa_rzkyy"
+                  href="https://www.instagram.com/traa___r"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 hover:text-[#689F99] dark:hover:text-[#689F99] transition-colors"
@@ -216,12 +232,13 @@ export function FooterSection() {
                   : "Available for Collaboration & Projects"}
               </span>
             </div>
-            <a
-              href="#hero"
-              className="font-mono text-[11px] hover:text-[#689F99] dark:hover:text-[#689F99] transition-colors"
+            <button
+              type="button"
+              onClick={scrollToTop}
+              className="font-mono text-[11px] hover:text-[#689F99] dark:hover:text-[#689F99] transition-colors cursor-pointer"
             >
               {lang === "id" ? "Kembali ke Atas ↑" : "Back to Top ↑"}
-            </a>
+            </button>
           </div>
         </div>
       </div>

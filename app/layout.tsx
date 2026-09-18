@@ -25,9 +25,38 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://heytraa.com"),
   title: "Putra Rizky (@traa_rzkyy) - Software Engineer & Services",
   description:
     "Personal portfolio, engineering journey, and digital services by Putra Rizky Nugraha. Full-Stack Developer, Golang Clean Architecture, Next.js, and AI Integration.",
+  icons: {
+    icon: "/images/logo-icon.png",
+    apple: "/images/logo-icon.png",
+  },
+  openGraph: {
+    title: "Putra Rizky (@traa_rzkyy) - Software Engineer & Services",
+    description:
+      "Personal portfolio, engineering journey, and digital services by Putra Rizky Nugraha. Full-Stack Developer, Golang Clean Architecture, Next.js, and AI Integration.",
+    url: "https://heytraa.com",
+    siteName: "heytraa.com",
+    images: [
+      {
+        url: "/images/logo-text.png",
+        width: 1200,
+        height: 630,
+        alt: "heytraa.com logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Putra Rizky (@traa_rzkyy) - Software Engineer & Services",
+    description:
+      "Full-Stack Developer, Golang Clean Architecture, Next.js, and AI Integration.",
+    images: ["/images/logo-text.png"],
+    creator: "@traa_rzkyy",
+  },
 };
 
 export default function RootLayout({

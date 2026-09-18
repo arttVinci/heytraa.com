@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Home,
@@ -13,7 +14,6 @@ import {
   Menu,
   X,
   BadgeCheck,
-  Briefcase,
   Sparkles,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/shared/components/icons";
@@ -38,11 +38,6 @@ export function SidebarNavbar() {
       label: lang === "id" ? "Tentang" : "About",
       href: `/${lang}/about`,
       icon: User,
-    },
-    {
-      label: lang === "id" ? "Pengalaman" : "Experience",
-      href: `/${lang}/experience`,
-      icon: Briefcase,
     },
     {
       label: lang === "id" ? "Proyek" : "Projects",
@@ -74,10 +69,17 @@ export function SidebarNavbar() {
 
   const renderNavContent = () => (
     <div className="flex flex-col items-center w-full">
-      {/* Profile Avatar (Placeholder / Kosong) */}
+      {/* Profile Logo */}
       <div className="relative">
-        <div className="w-24 h-24 rounded-full bg-[#F5F8F9] dark:bg-slate-800 border-2 border-dashed border-slate-300/90 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-500 shadow-inner transition-colors duration-200 hover:border-[#689F99] hover:bg-[#689F99]/10 hover:text-[#689F99]">
-          <User className="w-10 h-10 stroke-[1.5]" />
+        <div className="w-24 h-24 rounded-full bg-[#F5F8F9] dark:bg-slate-800 border-2 border-slate-200/80 dark:border-slate-700 flex items-center justify-center shadow-inner transition-all duration-200 hover:border-[#689F99] hover:shadow-[0_0_20px_rgba(104,159,153,0.2)] overflow-hidden">
+          <Image
+            src="/images/logo-icon.png"
+            alt="heytraa logo"
+            width={64}
+            height={64}
+            className="dark:invert object-contain select-none"
+            priority
+          />
         </div>
       </div>
 
@@ -209,8 +211,14 @@ export function SidebarNavbar() {
       {/* Mobile Top Header (Visible on < lg screens) */}
       <header className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-[#689F99]/20 px-4 py-3 flex items-center justify-between shadow-xs transition-colors">
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-full bg-[#F5F8F9] dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400">
-            <User className="w-4 h-4 stroke-[1.5]" />
+          <div className="w-9 h-9 rounded-full bg-[#F5F8F9] dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center overflow-hidden">
+            <Image
+              src="/images/logo-icon.png"
+              alt="heytraa logo"
+              width={28}
+              height={28}
+              className="dark:invert object-contain select-none"
+            />
           </div>
           <div>
             <div className="flex items-center gap-1">
