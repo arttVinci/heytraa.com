@@ -89,32 +89,31 @@ export function HeroCard() {
         >
           {lang === "id" ? (
             <>
-              Aspiring Software Engineer yang bertransisi dari maintenance elektrikal/elektronika ke full-stack development, dengan pengalaman langsung di backend{" "}
+              Software Engineer yang berfokus pada arsitektur backend berkinerja tinggi dan sistem web modern. Membawa disiplin ketat serta presisi dari latar belakang rekayasa elektrikal/elektronika ke dalam pengembangan perangkat lunak berbasis{" "}
               <span className="font-medium text-[#2D3342] dark:text-white">
                 Golang (Fiber, GORM)
               </span>{" "}
-              menggunakan prinsip{" "}
+              dengan fondasi{" "}
               <span className="font-medium text-[#2D3342] dark:text-white">
                 Clean Architecture
               </span>{" "}
               dan{" "}
               <span className="font-medium text-[#2D3342] dark:text-white">
                 Modular Monolith
-              </span>{" "}
-              serta frontend{" "}
+              </span>,{" "}
+              serta antarmuka responsif{" "}
               <span className="font-medium text-[#2D3342] dark:text-white">
                 React/TypeScript
-              </span>{" "}
-              - tervalidasi melalui magang REST API e-commerce siap produksi. Saat ini terus memperdalam konsep AI/LLM, mengeksplorasi RAG, vector database, LangChain, LangGraph, dan fine-tuning LoRA melalui proyek open-source aktif. Berdedikasi tinggi dan berkomitmen penuh membangun karier di bidang software engineering.
+              </span>.{" "}
+              Aktif mengintegrasikan alur kerja AI modern seperti RAG kontekstual, vector database (Qdrant), dan arsitektur multi-agent LangGraph untuk menghasilkan sistem yang andal dan siap skala.
             </>
           ) : (
             <>
-              Aspiring Software Engineer transitioning from electrical/electronics
-              maintenance into full-stack development, with hands-on experience in{" "}
+              Software Engineer specializing in high-throughput backend architecture, resilient systems, and modern web applications. Bringing engineering discipline and failure-resilient precision from an electrical/electronics background into scalable{" "}
               <span className="font-medium text-[#2D3342] dark:text-white">
                 Golang (Fiber, GORM)
               </span>{" "}
-              backend using{" "}
+              systems engineered with{" "}
               <span className="font-medium text-[#2D3342] dark:text-white">
                 Clean Architecture
               </span>{" "}
@@ -122,15 +121,11 @@ export function HeroCard() {
               <span className="font-medium text-[#2D3342] dark:text-white">
                 Modular Monolith
               </span>{" "}
-              principles and{" "}
+              principles, paired with type-safe{" "}
               <span className="font-medium text-[#2D3342] dark:text-white">
                 React/TypeScript
               </span>{" "}
-              frontend - validated through a production-ready e-commerce REST API
-              internship. Currently expanding my knowledge into AI/LLM concepts,
-              exploring RAG, vector databases, LangChain, LangGraph, and LoRA
-              fine-tuning through an active open-source project. Self-driven and
-              fully committed to building a career in software engineering.
+              frontends. Actively developing agentic AI workflows, contextual RAG with vector databases (Qdrant), and LangGraph multi-agent systems built for real-world production.
             </>
           )}
         </p>

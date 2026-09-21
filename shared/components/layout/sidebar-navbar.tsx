@@ -11,6 +11,7 @@ import {
   Send,
   ChevronRight,
   MessageSquare,
+  MessagesSquare,
   Menu,
   X,
   BadgeCheck,
@@ -69,15 +70,15 @@ export function SidebarNavbar() {
 
   const renderNavContent = () => (
     <div className="flex flex-col items-center w-full">
-      {/* Profile Logo */}
+      {/* Profile Photo */}
       <div className="relative">
-        <div className="w-24 h-24 rounded-full bg-[#F5F8F9] dark:bg-slate-800 border-2 border-slate-200/80 dark:border-slate-700 flex items-center justify-center shadow-inner transition-all duration-200 hover:border-[#689F99] hover:shadow-[0_0_20px_rgba(104,159,153,0.2)] overflow-hidden">
+        <div className="w-24 h-24 rounded-full bg-[#F5F8F9] dark:bg-slate-800 border-2 border-slate-200/80 dark:border-slate-700 flex items-center justify-center shadow-sm transition-all duration-200 hover:border-[#689F99] hover:shadow-[0_0_20px_rgba(104,159,153,0.25)] overflow-hidden">
           <Image
-            src="/images/logo-icon.png"
-            alt="heytraa logo"
-            width={64}
-            height={64}
-            className="dark:invert object-contain select-none"
+            src="/images/profile.jpg"
+            alt="Putra Rizky Nugraha"
+            width={96}
+            height={96}
+            className="w-full h-full object-cover object-[center_20%] select-none"
             priority
           />
         </div>
@@ -149,27 +150,29 @@ export function SidebarNavbar() {
         })}
       </nav>
 
-      {/* CTA Button - Smart Talk with Muted Sage Teal Gradient */}
+      {/* CTA Button - Group Chat Link */}
       <div className="w-full mt-4">
-        <button
-          type="button"
+        <Link
+          href={`/${lang}/chat`}
           onClick={() => {
-            window.dispatchEvent(new CustomEvent("open-assistant-chat"));
+            setMobileMenuOpen(false);
+            window.scrollTo({ top: 0, left: 0, behavior: "instant" });
           }}
           className={cn(
             "relative w-full group overflow-hidden flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl",
             "bg-gradient-to-r from-[#689F99] to-[#52837d] text-white text-xs sm:text-[13px] font-semibold tracking-wide",
             "shadow-md shadow-[#689F99]/25 hover:shadow-lg hover:shadow-[#689F99]/40",
-            "transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]",
+            "transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer",
+            pathname === `/${lang}/chat` && "ring-2 ring-white/60 shadow-lg"
           )}
         >
           {/* Subtle light shimmer effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
 
-          <MessageSquare className="w-3.5 h-3.5 text-white group-hover:scale-110 transition-transform duration-200" />
-          <span>Smart Talk</span>
-          <Sparkles className="w-3 h-3 text-[#F5F8F9] ml-0.5 opacity-90" />
-        </button>
+          <MessagesSquare className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-200" />
+          <span>{lang === "id" ? "Grup Chat" : "Group Chat"}</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse ml-0.5" />
+        </Link>
       </div>
 
       {/* Divider */}
@@ -213,11 +216,11 @@ export function SidebarNavbar() {
         <div className="flex items-center gap-2.5">
           <div className="w-9 h-9 rounded-full bg-[#F5F8F9] dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center overflow-hidden">
             <Image
-              src="/images/logo-icon.png"
-              alt="heytraa logo"
-              width={28}
-              height={28}
-              className="dark:invert object-contain select-none"
+              src="/images/profile.jpg"
+              alt="Putra Rizky Nugraha"
+              width={36}
+              height={36}
+              className="w-full h-full object-cover object-[center_20%] select-none"
             />
           </div>
           <div>

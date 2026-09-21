@@ -207,7 +207,7 @@ export function FooterSection() {
               </li>
               <li>
                 <a
-                  href="mailto:putrarizkynugraha@gmail.com"
+                  href="mailto:traarzkyy97@gmail.com"
                   className="hover:text-[#689F99] dark:hover:text-[#689F99] transition-colors"
                 >
                   {lang === "id" ? "Kirim Email" : "Email Me"}
