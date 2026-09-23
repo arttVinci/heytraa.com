@@ -171,7 +171,6 @@ export function SidebarNavbar() {
 
           <MessagesSquare className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-200" />
           <span>{lang === "id" ? "Grup Chat" : "Group Chat"}</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse ml-0.5" />
         </Link>
       </div>
 
