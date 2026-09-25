@@ -27,30 +27,93 @@ export function SimpleProfileStory() {
       {/* Subtle Dashed Divider */}
       <div className="w-full border-t border-dashed border-slate-200 dark:border-slate-800 my-3 sm:my-4" />
 
-      {/* Narrative Body - Readable, comfortable editorial flow */}
-      <div className="space-y-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed sm:leading-7">
+      {/* Narrative Body - Readable, comfortable editorial flow answering search intent */}
+      <div className="space-y-3.5 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed sm:leading-7">
         <p>
-          {lang === "id"
-            ? "Saya adalah seorang Software Engineer yang membangun fondasi teknis secara mandiri sembari bekerja penuh waktu di luar industri teknologi — melalui pembelajaran terarah, eksperimen langsung, dan proyek-proyek riil. Fokus utama saya saat ini adalah backend development menggunakan Golang (Fiber, GORM), menerapkan prinsip Clean Architecture dan Modular Monolith untuk membangun sistem yang scalable dan mudah dipelihara. Di sisi frontend, saya menggunakan React dan TypeScript untuk merancang antarmuka yang responsif dan terstruktur dengan baik. Keterampilan ini telah divalidasi melalui pengalaman magang riil, di mana saya turut membangun REST API e-commerce siap produksi."
-            : "I am a Software Engineer who has built my technical foundation independently while working full-time outside the tech industry — through self-directed learning, hands-on experimentation, and real-world projects. My primary focus right now is backend development using Golang (Fiber, GORM), applying Clean Architecture and Modular Monolith principles to build systems that are scalable and maintainable. On the frontend side, I use React and TypeScript to build responsive, well-structured interfaces. These skills have been validated through real-world engineering experience, including building production-ready e-commerce REST APIs."}
+          {lang === "id" ? (
+            <>
+              <strong className="font-semibold text-[#2D3342] dark:text-[#F5F8F9]">
+                Putra Rizky Nugraha
+              </strong>{" "}
+              adalah seorang Software Engineer dan Full-Stack Developer asal
+              Indonesia yang berfokus pada rekayasa sistem backend berkinerja
+              tinggi, arsitektur web modern, serta integrasi kecerdasan buatan
+              (AI). Dikenal di dunia digital dengan nama panggung{" "}
+              <span className="font-mono text-xs font-semibold text-[#689F99] bg-[#689F99]/10 px-1.5 py-0.5 rounded">
+                @traa_rzkyy
+              </span>
+              , ia saat ini menempuh pendidikan Sarjana (S1) Sistem Informasi di
+              Universitas Terbuka setelah menyelesaikan pendidikan vokasi Teknik
+              Elektronika Industri di SMKN 5 Kota Bekasi.
+            </>
+          ) : (
+            <>
+              <strong className="font-semibold text-[#2D3342] dark:text-[#F5F8F9]">
+                Putra Rizky Nugraha
+              </strong>{" "}
+              (also known online as{" "}
+              <span className="font-mono text-xs font-semibold text-[#689F99] bg-[#689F99]/10 px-1.5 py-0.5 rounded">
+                @traa_rzkyy
+              </span>
+              ) is an Indonesian Software Engineer and Full-Stack Developer
+              specializing in high-throughput backend architecture, modern web
+              applications, and artificial intelligence (AI) integrations. He is
+              currently pursuing a Bachelor&apos;s degree (S1) in Information Systems
+              at Universitas Terbuka, building upon a technical foundation in
+              Industrial Electronics Engineering from SMKN 5 Kota Bekasi.
+            </>
+          )}
         </p>
 
         <p>
           {lang === "id"
-            ? "Jalur saya menuju rekayasa perangkat lunak sebenarnya berawal dari latar belakang yang berbeda — pemeliharaan elektrikal dan elektronika industri — sebelum akhirnya saya memutuskan untuk beralih karier dan mendalami software development secara penuh."
-            : "My path toward software engineering actually started from a different background — electrical/electronics maintenance — before I decided to make a career shift and pursue software development full-on."}
+            ? "Perjalanan profesionalnya ditandai oleh transisi karier yang terarah — beralih dari dunia pemeliharaan elektrikal dan sirkuit elektronika industri menuju rekayasa perangkat lunak profesional. Disiplin ketat, metode investigasi akar masalah (root-cause analysis), serta ketelitian troubleshooting perangkat keras di lantai industri menjadi fondasi cara berpikir analitis yang ia bawa ke dalam rancang bangun perangkat lunak."
+            : "His professional path is shaped by a deliberate career transition — evolving from electrical maintenance and industrial electronic circuitry into professional software engineering. The rigorous discipline, root-cause troubleshooting methodologies, and hardware precision gained on the industrial floor now form the analytical foundation he applies to software system design."}
+        </p>
+
+        <p>
+          {lang === "id" ? (
+            <>
+              Dalam rekayasa sistem, fokus utamanya tertuju pada pengembangan
+              backend menggunakan{" "}
+              <strong className="font-medium text-[#2D3342] dark:text-slate-100">
+                Golang (Fiber, GORM)
+              </strong>{" "}
+              dengan kepatuhan terhadap prinsip{" "}
+              <strong className="font-medium text-[#2D3342] dark:text-slate-100">
+                Clean Architecture
+              </strong>{" "}
+              dan Modular Monolith guna menghasilkan arsitektur yang scalable,
+              mudah diuji, dan andal. Di ranah antarmuka, ia menggunakan React,
+              Next.js, dan TypeScript untuk merancang aplikasi web yang cepat dan
+              intuitif. Keterampilan ini teruji secara riil melalui perancangan
+              REST API e-commerce siap produksi serta berbagai proyek rekayasa
+              sumber terbuka.
+            </>
+          ) : (
+            <>
+              In systems engineering, his primary focus centers on backend
+              development using{" "}
+              <strong className="font-medium text-[#2D3342] dark:text-slate-100">
+                Golang (Fiber, GORM)
+              </strong>
+              , strictly applying{" "}
+              <strong className="font-medium text-[#2D3342] dark:text-slate-100">
+                Clean Architecture
+              </strong>{" "}
+              and Modular Monolith principles to build scalable, testable, and
+              resilient services. On the client side, he leverages React, Next.js,
+              and TypeScript to create fast, intuitive web interfaces. These
+              skills have been proven through production-ready e-commerce REST
+              APIs and active open-source engineering initiatives.
+            </>
+          )}
         </p>
 
         <p>
           {lang === "id"
-            ? "Selain itu, saya aktif mengeksplorasi integrasi AI/LLM ke dalam sistem yang saya bangun, termasuk implementasi Retrieval-Augmented Generation (RAG) dan vector database, yang saya kembangkan melalui proyek open-source pribadi. Beberapa proyek yang saat ini sedang saya kerjakan meliputi aplikasi asisten percakapan AI untuk pelaporan kendala infrastruktur dengan backend Go/Fiber dan integrasi LangGraph, serta bereksperimen membangun tool AI coding CLI sendiri dan infrastruktur self-hosted untuk mendeploy produk yang saya kembangkan."
-            : "Beyond that, I'm also actively exploring AI/LLM integration into the systems I build, including implementing Retrieval-Augmented Generation (RAG) and vector databases, which I've developed through a personal open-source project. Some of the projects I'm currently working on include an AI conversational assistant app for reporting infrastructure issues, with a Go/Fiber backend and LangGraph integration, as well as experimenting with building my own AI coding CLI tool and self-hosted infrastructure for deploying the products I develop."}
-        </p>
-
-        <p>
-          {lang === "id"
-            ? "Saya adalah seorang pembelajar mandiri yang terbiasa mengeksplorasi teknologi baru secara independen, serta memiliki komitmen penuh untuk membangun karier jangka panjang sebagai Software Engineer profesional."
-            : "I'm a self-driven learner, accustomed to exploring new technologies independently, and fully committed to building a long-term career as a professional Software Engineer."}
+            ? "Selain sistem inti, Putra aktif mengeksplorasi ekosistem AI/LLM, termasuk implementasi Retrieval-Augmented Generation (RAG) berbasis vector database (Qdrant) dan agen cerdas multi-langkah. Membangun kompetensi secara mandiri sembari bekerja penuh waktu di luar industri teknologi, ia membuktikan dedikasi tinggi dan komitmen jangka panjang untuk terus bertumbuh sebagai engineer profesional."
+            : "Beyond core backend systems, Putra actively explores the AI/LLM ecosystem, including Retrieval-Augmented Generation (RAG) architectures with vector databases (Qdrant) and autonomous multi-agent workflows. Having built his technical expertise independently while working full-time outside the tech sector, he embodies a relentless drive for mastery and a long-term dedication to engineering excellence."}
         </p>
       </div>
     </section>
