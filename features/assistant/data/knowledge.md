@@ -10,7 +10,7 @@
 - **Domisili:** Bekasi, Jawa Barat, Indonesia
 - **Email:** traarzkyy97@gmail.com
 - **Telepon:** +62 896-7330-2577
-- **Website:** https://tratech.my.id
+- **Website:** https://heytraa.com
 - **LinkedIn:** https://www.linkedin.com/in/putra-rizky-nugraha
 - **GitHub:** https://github.com/arttVinci
 
@@ -18,21 +18,21 @@
 
 > Teks berikut adalah copy "Tentang" resmi dari website pribadi Putra — ditulis orang pertama, dipakai sebagai jawaban utama untuk pertanyaan "siapa kamu" / "tentang kamu".
 
-> Saya adalah seorang Software Engineer yang membangun fondasi teknis secara mandiri sembari bekerja penuh waktu di luar industri teknologi — melalui pembelajaran terarah, eksperimen langsung, dan proyek-proyek riil. Fokus utama saya saat ini adalah backend development menggunakan Golang (Fiber, GORM), menerapkan prinsip Clean Architecture dan Modular Monolith untuk membangun sistem yang scalable dan mudah dipelihara. Di sisi frontend, saya menggunakan React dan TypeScript untuk merancang antarmuka yang responsif dan terstruktur dengan baik. Keterampilan ini telah divalidasi melalui pengalaman magang riil, di mana saya turut membangun REST API e-commerce siap produksi.
+> Saya adalah seorang Fullstack Developer yang membangun fondasi teknis secara mandiri sembari bekerja penuh waktu di luar industri teknologi — melalui pembelajaran terarah, eksperimen langsung, dan proyek-proyek riil. Fokus utama saya saat ini adalah backend development menggunakan Golang (Fiber, GORM), menerapkan prinsip Clean Architecture dan Modular Monolith untuk membangun sistem yang scalable dan mudah dipelihara. Di sisi frontend, saya menggunakan React dan TypeScript untuk merancang antarmuka yang responsif dan terstruktur dengan baik. Keterampilan ini telah divalidasi melalui pengalaman magang riil, di mana saya turut membangun REST API e-commerce siap produksi.
 
 Jalur saya menuju rekayasa perangkat lunak sebenarnya berawal dari latar belakang yang berbeda — pemeliharaan elektrikal dan elektronika industri — sebelum akhirnya saya memutuskan untuk beralih karier dan mendalami software development secara penuh.
 
 Selain itu, saya aktif mengeksplorasi integrasi AI/LLM ke dalam sistem yang saya bangun, termasuk implementasi Retrieval-Augmented Generation (RAG) dan vector database, yang saya kembangkan melalui proyek open-source pribadi. Beberapa proyek yang saat ini sedang saya kerjakan meliputi aplikasi asisten percakapan AI untuk pelaporan kendala infrastruktur dengan backend Go/Fiber dan integrasi LangGraph, serta bereksperimen membangun tool AI coding CLI sendiri dan infrastruktur self-hosted untuk mendeploy produk yang saya kembangkan.
 
-Saya adalah seorang pembelajar mandiri yang terbiasa mengeksplorasi teknologi baru secara independen, serta memiliki komitmen penuh untuk membangun karier jangka panjang sebagai Software Engineer profesional.
+Saya adalah seorang pembelajar mandiri yang terbiasa mengeksplorasi teknologi baru secara independen, serta memiliki komitmen penuh untuk membangun karier jangka panjang sebagai Fullstack Developer profesional.
 
-Saya adalah seorang Software Engineer yang membangun fondasi teknis secara mandiri sembari bekerja penuh waktu di luar industri teknologi — melalui pembelajaran terarah, eksperimen langsung, dan proyek-proyek riil. Fokus utama saya saat ini adalah backend development menggunakan Golang (Fiber, GORM), menerapkan prinsip Clean Architecture dan Modular Monolith untuk membangun sistem yang scalable dan mudah dipelihara. Di sisi frontend, saya menggunakan React dan TypeScript untuk merancang antarmuka yang responsif dan terstruktur dengan baik. Keterampilan ini telah divalidasi melalui pengalaman magang riil, di mana saya turut membangun REST API e-commerce siap produksi.
+Saya adalah seorang Fullstack Developer yang membangun fondasi teknis secara mandiri sembari bekerja penuh waktu di luar industri teknologi — melalui pembelajaran terarah, eksperimen langsung, dan proyek-proyek riil. Fokus utama saya saat ini adalah backend development menggunakan Golang (Fiber, GORM), menerapkan prinsip Clean Architecture dan Modular Monolith untuk membangun sistem yang scalable dan mudah dipelihara. Di sisi frontend, saya menggunakan React dan TypeScript untuk merancang antarmuka yang responsif dan terstruktur dengan baik. Keterampilan ini telah divalidasi melalui pengalaman magang riil, di mana saya turut membangun REST API e-commerce siap produksi.
 
 Jalur saya menuju rekayasa perangkat lunak sebenarnya berawal dari latar belakang yang berbeda — pemeliharaan elektrikal dan elektronika industri — sebelum akhirnya saya memutuskan untuk beralih karier dan mendalami software development secara penuh.
 
 Selain itu, saya aktif mengeksplorasi integrasi AI/LLM ke dalam sistem yang saya bangun, termasuk implementasi Retrieval-Augmented Generation (RAG) dan vector database, yang saya kembangkan melalui proyek open-source pribadi. Beberapa proyek yang saat ini sedang saya kerjakan meliputi aplikasi asisten percakapan AI untuk pelaporan kendala infrastruktur dengan backend Go/Fiber dan integrasi LangGraph, serta bereksperimen membangun tool AI coding CLI sendiri dan infrastruktur self-hosted untuk mendeploy produk yang saya kembangkan.
 
-Saya adalah seorang pembelajar mandiri yang terbiasa mengeksplorasi teknologi baru secara independen, serta memiliki komitmen penuh untuk membangun karier jangka panjang sebagai Software Engineer profesional.
+Saya adalah seorang pembelajar mandiri yang terbiasa mengeksplorasi teknologi baru secara independen, serta memiliki komitmen penuh untuk membangun karier jangka panjang sebagai Fullstack Developer profesional.
 
 ## 3. Latar Belakang & Perjalanan Karier
 
@@ -51,7 +51,7 @@ Saya adalah seorang pembelajar mandiri yang terbiasa mengeksplorasi teknologi ba
 | Institusi          | Jenjang                                      | Periode       |
 | ------------------ | -------------------------------------------- | ------------- |
 | SMKN 5 Kota Bekasi | Teknik Elektronika Industri (nilai akhir 83) | 2020–2023     |
-| Open University    | S1 Sistem Informasi                          | 2024–sekarang |
+| Open University    | S1 Sistem Informasi                          | 2023–sekarang |
 
 ## 5. Pengalaman Kerja
 
@@ -124,7 +124,7 @@ Aplikasi e-commerce berbasis Laravel & Filament dengan Clean Architecture, terin
 
 ## 9. Layanan & Jasa (Services)
 
-Putra menawarkan layanan rekayasa perangkat lunak (software engineering) profesional end-to-end, mulai dari arsitektur backend, pengembangan antarmuka frontend, hingga integrasi kecerdasan buatan (AI):
+Putra menawarkan layanan rekayasa perangkat lunak (Fullstack Developer) profesional end-to-end, mulai dari arsitektur backend, pengembangan antarmuka frontend, hingga integrasi kecerdasan buatan (AI):
 
 1. **Frontend & Web Apps:**
    - Pengembangan aplikasi web modern dan responsif menggunakan **Next.js** dan **React 19**.
@@ -146,10 +146,11 @@ Putra menawarkan layanan rekayasa perangkat lunak (software engineering) profesi
    - Otomasi alur data dan integrasi API pihak ketiga (payment gateway, webhook, parser dokumen).
 
 **Prinsip Kerja:**
-- *Clean Architecture by Default:* Kode rapi, terstruktur, dan minim technical debt.
-- *Type-Safe & High Concurrency:* Stabilitas backend Go dipadukan ketatnya tipe data TypeScript.
-- *Async-First & Transparent Delivery:* Progres terpantau lewat Git commit terstruktur, dokumentasi API (OpenAPI/Swagger) lengkap, dan preview berkala.
-- *Hubungi untuk Kolaborasi:* Pengunjung yang tertarik bekerja sama dapat menghubungi Putra langsung melalui formulir kontak di website, email (**traarzkyy97@gmail.com**), atau LinkedIn.
+
+- _Clean Architecture by Default:_ Kode rapi, terstruktur, dan minim technical debt.
+- _Type-Safe & High Concurrency:_ Stabilitas backend Go dipadukan ketatnya tipe data TypeScript.
+- _Async-First & Transparent Delivery:_ Progres terpantau lewat Git commit terstruktur, dokumentasi API (OpenAPI/Swagger) lengkap, dan preview berkala.
+- _Hubungi untuk Kolaborasi:_ Pengunjung yang tertarik bekerja sama dapat menghubungi Putra langsung melalui formulir kontak di website, email (**traarzkyy97@gmail.com**), atau LinkedIn.
 
 ## 10. Catatan untuk Assistant (Panduan Jawab)
 
