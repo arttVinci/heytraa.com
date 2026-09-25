@@ -16,6 +16,13 @@ export async function generateMetadata({
     description: isId
       ? "Ruang publik terbuka untuk berdiskusi, memberikan feedback seputar portofolio dan proyek, serta bertukar insight teknologi bersama Putra Rizky."
       : "Open public community discussion room to leave feedback, discuss systems & projects, and share tech insights with Putra Rizky.",
+    alternates: {
+      canonical: `https://heytraa.com/${lang}/chat`,
+      languages: {
+        id: "https://heytraa.com/id/chat",
+        en: "https://heytraa.com/en/chat",
+      },
+    },
   };
 }
 

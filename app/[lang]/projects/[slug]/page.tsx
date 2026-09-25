@@ -43,6 +43,13 @@ export async function generateMetadata({
   return {
     title: `${project.title} — ${sub} | Putra Rizky Nugraha`,
     description: desc,
+    alternates: {
+      canonical: `https://heytraa.com/${lang}/projects/${slug}`,
+      languages: {
+        id: `https://heytraa.com/id/projects/${slug}`,
+        en: `https://heytraa.com/en/projects/${slug}`,
+      },
+    },
     openGraph: {
       title: `${project.title} — ${sub}`,
       description: desc,

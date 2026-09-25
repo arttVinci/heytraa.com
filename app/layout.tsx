@@ -7,6 +7,7 @@ import { AssistantChat } from "@/features/assistant";
 import { ClickSpark } from "@/shared/components/click-spark";
 import { SmoothCursor } from "@/shared/components/smooth-cursor";
 import { LanguageProvider } from "@/shared/context/language-context";
+import { PersonJsonLd, WebSiteJsonLd } from "@/shared/components/seo/json-ld";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,19 +27,42 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://heytraa.com"),
-  title: "Putra Rizky (@traa_rzkyy) - Software Engineer & Services",
+  title: {
+    default: "Putra Rizky (@traa_rzkyy) - Fullstack Developer & Services",
+    template: "%s | heytraa.com",
+  },
   description:
     "Personal portfolio, engineering journey, and digital services by Putra Rizky Nugraha. Full-Stack Developer, Golang Clean Architecture, Next.js, and AI Integration.",
   icons: {
     icon: "/images/logo-icon.png",
     apple: "/images/logo-icon.png",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://heytraa.com",
+    languages: {
+      id: "https://heytraa.com/id",
+      en: "https://heytraa.com/en",
+    },
+  },
   openGraph: {
-    title: "Putra Rizky (@traa_rzkyy) - Software Engineer & Services",
+    title: "Putra Rizky (@traa_rzkyy) - Fullstack Developer & Services",
     description:
       "Personal portfolio, engineering journey, and digital services by Putra Rizky Nugraha. Full-Stack Developer, Golang Clean Architecture, Next.js, and AI Integration.",
     url: "https://heytraa.com",
     siteName: "heytraa.com",
+    locale: "id_ID",
+    alternateLocale: "en_US",
     images: [
       {
         url: "/images/logo-text.png",
@@ -51,9 +75,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Putra Rizky (@traa_rzkyy) - Software Engineer & Services",
+    title: "Putra Rizky (@traa_rzkyy) - Fullstack Developer & Services",
     description:
-      "Full-Stack Developer, Golang Clean Architecture, Next.js, and AI Integration.",
+      "Personal portfolio, engineering journey, and digital services by Putra Rizky Nugraha. Full-Stack Developer, Golang Clean Architecture, Next.js, and AI Integration.",
     images: ["/images/logo-text.png"],
     creator: "@traa_rzkyy",
   },
@@ -71,6 +95,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-[#f8fafc] dark:bg-[#090e17] text-[#2D3342] dark:text-[#F5F8F9] selection:bg-[#689F99] selection:text-white relative transition-colors duration-300">
+        <PersonJsonLd />
+        <WebSiteJsonLd />
         <ThemeInitializer />
         <LanguageProvider>
           <SmoothCursor />

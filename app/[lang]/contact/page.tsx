@@ -16,6 +16,13 @@ export async function generateMetadata({
     description: isId
       ? "Hubungi Putra Rizky Nugraha untuk mendiskusikan kebutuhan arsitektur backend Golang, aplikasi web modern Next.js, dan integrasi sistem AI. Kirim pesan langsung atau terhubung via LinkedIn & GitHub."
       : "Get in touch with Putra Rizky Nugraha to discuss Golang backend architecture, modern Next.js web applications, and AI integrations. Send a direct message or connect via LinkedIn and GitHub.",
+    alternates: {
+      canonical: `https://heytraa.com/${lang}/contact`,
+      languages: {
+        id: "https://heytraa.com/id/contact",
+        en: "https://heytraa.com/en/contact",
+      },
+    },
   };
 }
 

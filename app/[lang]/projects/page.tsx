@@ -16,6 +16,13 @@ export async function generateMetadata({
     description: isId
       ? "Koleksi proyek nyata, arsitektur sistem backend Golang Clean Architecture, dan integrasi AI (Fixora, Portofy, Dekatku, Seapedia) oleh Putra Rizky Nugraha."
       : "A showcase of real-world software engineering, high-throughput Golang systems, and AI integrations (Fixora, Portofy, Dekatku, Seapedia) by Putra Rizky Nugraha.",
+    alternates: {
+      canonical: `https://heytraa.com/${lang}/projects`,
+      languages: {
+        id: "https://heytraa.com/id/projects",
+        en: "https://heytraa.com/en/projects",
+      },
+    },
   };
 }
 

@@ -16,6 +16,13 @@ export async function generateMetadata({
     description: isId
       ? "Pengenalan singkat mengenai siapa saya, riwayat karier profesional, latar belakang pendidikan, dan sertifikasi teknis Putra Rizky Nugraha."
       : "A brief introduction about who I am, professional career journey, education background, and technical certifications of Putra Rizky Nugraha.",
+    alternates: {
+      canonical: `https://heytraa.com/${lang}/about`,
+      languages: {
+        id: "https://heytraa.com/id/about",
+        en: "https://heytraa.com/en/about",
+      },
+    },
   };
 }
 
