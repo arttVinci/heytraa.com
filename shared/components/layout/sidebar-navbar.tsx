@@ -88,7 +88,7 @@ export function SidebarNavbar() {
       <div className="flex flex-col items-center mt-3 text-center">
         <div className="flex items-center gap-1.5">
           <h2 className="text-base font-bold tracking-tight text-[#2D3342] dark:text-[#F5F8F9]">
-            Putra Rizky
+            Putra Rizky Nugraha
           </h2>
           <BadgeCheck className="w-4 h-4 text-[#689F99] fill-[#689F99] shrink-0" />
         </div>
@@ -225,7 +225,7 @@ export function SidebarNavbar() {
           <div>
             <div className="flex items-center gap-1">
               <span className="text-sm font-bold text-[#2D3342] dark:text-[#F5F8F9]">
-                Putra Rizky
+                Putra Rizky Nugraha
               </span>
               <BadgeCheck className="w-3.5 h-3.5 text-[#689F99] fill-[#689F99]" />
             </div>
