@@ -1,0 +1,34 @@
+# heytraa.com — Putra Rizky Nugraha
+
+> Personal portfolio, engineering showcase, and digital services by Putra Rizky Nugraha (@traa_rzkyy). Full-Stack Developer specializing in Golang Clean Architecture, Next.js, and AI Integration.
+
+## About
+
+Putra Rizky Nugraha is a Full-Stack Developer based in Indonesia, building high-performance web applications and scalable backend systems. Expertise includes Golang Clean Architecture, Next.js, REST APIs, Docker, and AI integrations (RAG, multi-agent LLM systems).
+
+## Pages
+
+- [Home](https://heytraa.com/id): Main landing page with project showcase and engineering highlights.
+- [About](https://heytraa.com/id/about): Professional background, career journey, education, and technical certifications.
+- [Projects](https://heytraa.com/id/projects): Portfolio of real-world software engineering projects — Fixora, Seapedia, Dekatku, GCTech, Portofy App.
+- [Services](https://heytraa.com/id/services): Production-ready full-stack web and backend development services.
+- [Contact](https://heytraa.com/id/contact): Get in touch for collaboration, project discussions, or freelance inquiries.
+- [Community Chat](https://heytraa.com/id/chat): Public discussion room for feedback, tech insights, and community interaction.
+
+## Featured Projects
+
+- [Fixora](https://heytraa.com/id/projects/fixora): AI-powered civic infrastructure reporting platform with multi-agent LLM verification and Qdrant Vector RAG.
+- [Seapedia](https://heytraa.com/id/projects/seapedia): High-throughput e-commerce backend with ACID-guaranteed transactions and Golang Clean Architecture.
+- [Dekatku](https://heytraa.com/id/projects/dekatku): Location-based UMKM directory with Haversine distance calculation and conversational AI assistant.
+- [GCTech](https://heytraa.com/id/projects/gctech): Modern Next.js storefront for curated premium gadgets and tech accessories.
+- [Portofy App](https://heytraa.com/id/projects/portofy-app): Multi-device portfolio dashboard with mobile-first responsive UX.
+
+## Languages
+
+This website is available in Indonesian (default, /id) and English (/en).
+
+## Links
+
+- [GitHub](https://github.com/arttVinci)
+- [LinkedIn](https://www.linkedin.com/in/putra-rizky-nugraha)
+- [X / Twitter](https://x.com/traa_rzkyy)

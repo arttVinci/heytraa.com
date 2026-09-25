@@ -332,26 +332,30 @@ const InfiniteSpiral = ({
             return (
               <div
                 key={item.id ?? `${item.src}-${index}`}
-                ref={setCardRef(index)}
-                className={`${itemClassName} cursor-pointer`}
-                style={cardStyle}
-                role="button"
-                tabIndex={0}
-                aria-label={item.label ?? item.title ?? item.alt}
-                onClick={(e) => {
-                  if (!dragMovedRef.current) {
-                    e.preventDefault();
-                    onItemClick(item, index);
-                  }
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    onItemClick(item, index);
-                  }
-                }}
+                role="listitem"
               >
-                {content}
+                <div
+                  ref={setCardRef(index)}
+                  className={`${itemClassName} cursor-pointer`}
+                  style={cardStyle}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={item.label ?? item.title ?? item.alt}
+                  onClick={(e) => {
+                    if (!dragMovedRef.current) {
+                      e.preventDefault();
+                      onItemClick(item, index);
+                    }
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      onItemClick(item, index);
+                    }
+                  }}
+                >
+                  {content}
+                </div>
               </div>
             );
           }

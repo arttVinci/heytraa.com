@@ -183,6 +183,7 @@ export function SimpleCertificationsList() {
         <div
           role="dialog"
           aria-modal="true"
+          aria-label={selectedCert.title[lang]}
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-in fade-in-50 duration-200"
           onClick={() => setSelectedCert(null)}
         >

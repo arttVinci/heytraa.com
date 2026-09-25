@@ -110,6 +110,7 @@ export function ProjectSpiralShowcase() {
           onClick={() => setSelectedProject(null)}
           role="dialog"
           aria-modal="true"
+          aria-label={selectedProject.title}
         >
           <div
             className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white dark:bg-slate-900 rounded-3xl border border-[#689F99]/30 shadow-2xl shadow-black/40 p-6 sm:p-8 space-y-6 animate-in zoom-in-95 duration-200"
