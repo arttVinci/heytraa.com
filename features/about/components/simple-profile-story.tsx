@@ -15,9 +15,7 @@ export function SimpleProfileStory() {
       {/* Header */}
       <div className="space-y-1.5">
         <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#2D3342] dark:text-[#F5F8F9]">
-          {lang === "id"
-            ? "Tentang Putra Rizky Nugraha"
-            : "About Putra Rizky Nugraha"}
+          {lang === "id" ? "Tentang" : "About"}
         </h1>
         <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400">
           {lang === "id"
@@ -58,4 +56,3 @@ export function SimpleProfileStory() {
     </section>
   );
 }
-
